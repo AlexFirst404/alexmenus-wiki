@@ -1,0 +1,53 @@
+site_name: AlexMenus
+site_description: Документация плагина AlexMenus — движок меню для Paper 1.21.11
+site_url: https://alexfirst404.github.io/alexmenus-wiki/
+repo_url: https://github.com/AlexFirst404/alexmenus-editor
+repo_name: AlexFirst404/alexmenus-editor
+docs_dir: docs
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+    - scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+  features:
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+
+nav:
+  - Главная: index.md
+  - Начало работы: Getting-Started.md
+  - Типы меню: Menu-Types.md
+  - Предметы и клики: Items-and-Clicks.md
+  - Условия (requirements): Requirements.md
+  - Действия: Actions.md
+  - Плейсхолдеры и интеграции: Placeholders-and-Integrations.md
+  - Команды и права: Commands-and-Permissions.md
+  - Веб-редактор: Web-Editor.md
+  - Примеры: Examples.md
