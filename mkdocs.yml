@@ -43,10 +43,12 @@ markdown_extensions:
 nav:
   - Главная: index.md
   - Начало работы: Getting-Started.md
+  - Настройки (config.yml): Configuration.md
   - Типы меню: Menu-Types.md
   - Предметы и клики: Items-and-Clicks.md
   - Условия (requirements): Requirements.md
   - Действия: Actions.md
+  - Расширенные опции меню: Advanced-Menu-Options.md
   - Плейсхолдеры и интеграции: Placeholders-and-Integrations.md
   - Команды и права: Commands-and-Permissions.md
   - Веб-редактор: Web-Editor.md

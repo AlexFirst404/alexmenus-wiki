@@ -72,5 +72,5 @@ editor:
 API воркера: `POST /post` (тело = JSON-бандл) → `{ "key": "<код>" }`; `GET /<код>` → тот же JSON (или `404`,
 если истёк). Полная инструкция по деплою — в README папки `cloudflare-worker/`.
 
-Связанные страницы: [Commands-and-Permissions](Commands-and-Permissions) (`/am editor`, `/am apply`),
-[Getting-Started](Getting-Started).
+Связанные страницы: [Commands-and-Permissions](Commands-and-Permissions.md) (`/am editor`, `/am apply`),
+[Getting-Started](Getting-Started.md).

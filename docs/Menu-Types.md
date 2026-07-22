@@ -13,13 +13,17 @@ type: chest        # или inventory; любое другое/пустое зн
 | `type` | `chest` или `inventory`. По умолчанию `chest`. |
 | `title` | Заголовок окна (для `chest`). Поддерживает цвета и плейсхолдеры. |
 | `rows` | Число рядов (только `chest`, 1–6; вне диапазона обрезается). Для `inventory` игнорируется. |
-| `commands` | Список команд, открывающих меню (см. [Commands-and-Permissions](Commands-and-Permissions)). |
+| `commands` | Список команд, открывающих меню (см. [Commands-and-Permissions](Commands-and-Permissions.md)). |
 | `triggers` | Легаси-алиас `commands` (списки объединяются, приводятся к нижнему регистру, дублируются). |
 | `command-description` | Описание зарегистрированной команды меню (для `/help`). |
 | `show-in-help` | Показывать команду меню в `/help`. По умолчанию `true`. |
 | `permission` | Право на открытие меню (на всех путях). Пусто = без ограничения. |
-| `open-requirement` | Условие открытия меню (см. [Requirements](Requirements)). |
-| `items` | Предметы по слотам (см. [Items-and-Clicks](Items-and-Clicks)). |
+| `open-requirement` | Условие открытия меню (см. [Requirements](Requirements.md)). |
+| `items` | Предметы по слотам (см. [Items-and-Clicks](Items-and-Clicks.md)). |
+| `update-interval` | Живое обновление плейсхолдеров открытого меню, тики (см. [Advanced-Menu-Options](Advanced-Menu-Options.md)). |
+| `args` | Имена аргументов команды открытия → `{имя}`/`{argN}`/`{args}` (см. [Advanced-Menu-Options](Advanced-Menu-Options.md)). |
+| `open-item` | Предмет-открывашка в хотбаре, ПКМ открывает меню (см. [Advanced-Menu-Options](Advanced-Menu-Options.md)). |
+| `open-animation` | Пошаговое появление предметов при открытии, только `chest` (см. [Advanced-Menu-Options](Advanced-Menu-Options.md)). |
 
 ## `type: chest`
 
@@ -59,7 +63,7 @@ inventory-menu:
 - `rows` для inventory-меню **игнорируется** (всегда 27 ячеек).
 - Меню-по-умолчанию (`inventory-menu.default`) авто-показывается при входе/респавне — но **тихо** уважает
   `permission` и `open-requirement` меню (без спама deny-сообщений всем).
-- Переключение между inventory-меню — действием `open_menu` (см. [Actions](Actions)).
+- Переключение между inventory-меню — действием `open_menu` (см. [Actions](Actions.md)).
 - Отключить конкретному игроку: `/am invclose [игрок]` (вернётся при `/am open <inv-меню>` или перезаходе).
 
 ⚠️ **Экспериментально / безопасность:** пока меню активно, слоты 9–35 — «только меню»: положить туда вещи
@@ -97,5 +101,5 @@ items:
 Легаси-коды: `&0..&9`, `&a..&f` (регистр не важен) — цвета; `&k/&l/&m/&n/&o/&r` —
 обфускация/жирный/зачёркнутый/подчёркнутый/курсив/сброс. `&`, за которым нет валидного кода, остаётся как
 есть. У **имён и лора предметов** курсив по умолчанию **выключен** (ванильный италик не навязывается).
-Полный разбор форматов — на странице [Items-and-Clicks](Items-and-Clicks) и в
-[Placeholders-and-Integrations](Placeholders-and-Integrations).
+Полный разбор форматов — на странице [Items-and-Clicks](Items-and-Clicks.md) и в
+[Placeholders-and-Integrations](Placeholders-and-Integrations.md).

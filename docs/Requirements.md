@@ -94,7 +94,7 @@ value: "30"
 | `>` `<` `>=` `<=` | числовое сравнение (обе стороны парсятся в число; не-число → `false`) |
 
 Без PlaceholderAPI плейсхолдер не разворачивается (строка остаётся как есть), поэтому такое условие обычно
-не проходит — см. [Placeholders-and-Integrations](Placeholders-and-Integrations).
+не проходит — см. [Placeholders-and-Integrations](Placeholders-and-Integrations.md).
 
 ### `money` (алиас `has_money`) — нужен Vault
 
@@ -250,4 +250,4 @@ open-requirement:
       text: "<red>Нужен ранг Elite или 100k на счету."
 ```
 
-Действия в `deny`/`success` — любые из [Actions](Actions).
+Действия в `deny`/`success` — любые из [Actions](Actions.md).

@@ -56,15 +56,15 @@ view-requirement:
   value: "1000"
 ```
 
-Операторы сравнения — см. [Requirements](Requirements).
+Операторы сравнения — см. [Requirements](Requirements.md).
 
 ## Vault (экономика)
 
 Мягкая интеграция (`integration/VaultHook.java`). Нужен **Vault** + плагин-провайдер экономики
 (EssentialsX, CMI и т.п.). Используется в:
 
-- условии [`money`](Requirements) (`type: money`, алиас `has_money`);
-- действиях [`give_money` / `take_money`](Actions).
+- условии [`money`](Requirements.md) (`type: money`, алиас `has_money`);
+- действиях [`give_money` / `take_money`](Actions.md).
 
 Без Vault или без провайдера экономики: `money`-условие всегда `false`, `give_money`/`take_money` —
 no-op (транзакция не проходит). Краша нет.
@@ -88,8 +88,8 @@ clicks:
 Отдельного хука нет — AlexMenus использует стандартные права Bukkit, а LuckPerms (или другой плагин прав)
 их предоставляет. Права применяются в двух местах:
 
-- условие [`permission`](Requirements) (`type: permission`);
-- ключ меню `permission:` (гейт открытия на всех путях — см. [Commands-and-Permissions](Commands-and-Permissions)).
+- условие [`permission`](Requirements.md) (`type: permission`);
+- ключ меню `permission:` (гейт открытия на всех путях — см. [Commands-and-Permissions](Commands-and-Permissions.md)).
 
 ```yaml
 permission: alexmenus.menu.shop      # право на открытие всего меню
@@ -106,7 +106,7 @@ items:
 
 ## MyCommand и другие командные плагины
 
-Действие [`run_command`](Actions) выполняет любую серверную команду — своей или чужой (MyCommand,
+Действие [`run_command`](Actions.md) выполняет любую серверную команду — своей или чужой (MyCommand,
 CommandAPI, Essentials, датапаки…). `as: console` — от консоли (для команд, требующих прав), `as: player`
 — от имени игрока.
 

@@ -1,8 +1,8 @@
 # Примеры
 
 Готовые, аннотированные меню. Клади файлы в `plugins/AlexMenus/menus/` и делай `/am reload`. Ключи и
-поведение соответствуют парсеру; см. [Items-and-Clicks](Items-and-Clicks), [Actions](Actions),
-[Requirements](Requirements).
+поведение соответствуют парсеру; см. [Items-and-Clicks](Items-and-Clicks.md), [Actions](Actions.md),
+[Requirements](Requirements.md).
 
 ## 1. Магазин с requirements — `menus/shop.yml`
 
@@ -221,7 +221,7 @@ inventory-menu:
   default: hud
 ```
 
-⚠️ Inventory-меню экспериментально — читай предупреждения в [Menu-Types](Menu-Types) (слоты 9–35 становятся
+⚠️ Inventory-меню экспериментально — читай предупреждения в [Menu-Types](Menu-Types.md) (слоты 9–35 становятся
 «только меню», реальные вещи оттуда при первом показе выпадают игроку).
 
 ## 4. Хаб с навигацией и conditional — `menus/hub.yml`
@@ -288,5 +288,5 @@ items:
         - type: refresh
 ```
 
-Дальше: [Requirements](Requirements) — все типы условий; [Actions](Actions) — все действия;
-[Web-Editor](Web-Editor) — собрать такое мышкой.
+Дальше: [Requirements](Requirements.md) — все типы условий; [Actions](Actions.md) — все действия;
+[Web-Editor](Web-Editor.md) — собрать такое мышкой.

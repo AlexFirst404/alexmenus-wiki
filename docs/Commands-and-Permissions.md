@@ -2,19 +2,31 @@
 
 ## Команда `/alexmenus` (`/am`)
 
-Основная команда плагина. Алиас — `/am`.
+Основная команда плагина. Алиасы — `/am`, `/alexmenu`, `/amenus` (любой из них работает как `/alexmenus`).
 
 | Подкоманда | Право | Описание |
 |---|---|---|
-| `/am open <id> [игрок]` | `alexmenus.use` (себе); `alexmenus.admin` (другому игроку) | Открыть меню себе или, с 3-м аргументом, указанному игроку. |
-| `/am preview <id>` | `alexmenus.admin` | Предпросмотр меню (только игроку). |
+| `/am open <id> [игрок] [аргументы...]` | `alexmenus.use` (себе); `alexmenus.admin` (другому игроку) | Открыть меню себе или, с указанием игрока, ему. Хвостовые токены — [аргументы меню](Advanced-Menu-Options.md) (`args`). |
+| `/am preview <id> [аргументы...]` | `alexmenus.admin` | Предпросмотр меню (только игроку). |
 | `/am reload` | `alexmenus.admin` | **Полная перезагрузка плагина** (config + меню + команды + триггеры + редактор). Рестарт не нужен. |
-| `/am editor` | `alexmenus.admin` | Залить меню в paste-сервис, получить ссылку на веб-редактор (см. [Web-Editor](Web-Editor)). |
+| `/am editor` | `alexmenus.admin` | Залить меню в paste-сервис, получить ссылку на веб-редактор (см. [Web-Editor](Web-Editor.md)). |
 | `/am apply <код>` | `alexmenus.admin` | Скачать правки из редактора по коду, записать `menus/*.yml` и перезагрузить. |
 | `/am invclose [игрок]` | себе — без спец-права; другому — `alexmenus.admin` | Отключить inventory-меню игроку (вернётся при `/am open <inv-меню>` или перезаходе). |
+| `/am info` | без спец-права | Диагностика: версия, число меню, статус PlaceholderAPI/Vault, адрес редактора, результат проверки обновлений. |
 
 Без аргументов `/am` печатает краткую справку и число загруженных меню. Tab-комплит подсказывает
 подкоманды, id меню (для `open`/`preview`) и имена онлайн-игроков.
+
+### `/am info`
+
+Выводит сводку по плагину (доступна всем — спец-права не требует):
+
+- версия плагина;
+- число загруженных меню;
+- статус мягких интеграций **PlaceholderAPI** и **Vault** (да/нет);
+- адрес хостед-редактора (`editor.url`);
+- результат проверки обновлений (`update-checker`, см. [Configuration](Configuration.md)): актуальная версия /
+  доступна новая `<версия>` / проверка выключена / неизвестно.
 
 Примеры:
 
@@ -26,6 +38,9 @@
 /am editor
 /am apply Ab3xK
 /am invclose Steve
+/am info
+/alexmenu open shop         # алиас /am
+/amenus reload             # алиас /am
 ```
 
 ## Команды меню (`commands:` / `triggers:`)
@@ -65,7 +80,7 @@ permission: alexmenus.menu.vip
 ```
 
 Пусто/не задано — меню открыто всем (в рамках `alexmenus.use`). Это отдельный гейт от
-[`open-requirement`](Requirements): `permission:` — статичное право, `open-requirement` — условие с
+[`open-requirement`](Requirements.md): `permission:` — статичное право, `open-requirement` — условие с
 deny-действиями.
 
 ## Права плагина (`plugin.yml`)
@@ -83,7 +98,7 @@ deny-действиями.
 1. **Свою команду меню** (`commands: [shop]` → `/shop`).
 2. **`/am open <id>`** (и `/am preview <id>` для админа).
 3. **Предмет с PDC-тегом** — ПКМ предметом, выданным `give_item` с полем `menu` (нужны `alexmenus.use` и
-   право меню). См. [Actions](Actions).
+   право меню). См. [Actions](Actions.md).
 4. **Java-API** — `AlexMenusApi` из Bukkit ServicesManager:
 
 ```java

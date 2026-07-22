@@ -58,8 +58,8 @@ items:
 - `/am open hello` — универсальная команда;
 - `/am preview hello` — предпросмотр (только для админа).
 
-Подробнее про поля предмета и клики — [Items-and-Clicks](Items-and-Clicks); про заголовок, ряды и
-типы — [Menu-Types](Menu-Types).
+Подробнее про поля предмета и клики — [Items-and-Clicks](Items-and-Clicks.md); про заголовок, ряды и
+типы — [Menu-Types](Menu-Types.md).
 
 ## 3. Reload
 
@@ -76,4 +76,4 @@ items:
 /am apply <код>         # скачивает правки, пишет menus/*.yml и перезагружает
 ```
 
-Подробнее — [Web-Editor](Web-Editor). Полная справка по командам и правам — [Commands-and-Permissions](Commands-and-Permissions).
+Подробнее — [Web-Editor](Web-Editor.md). Полная справка по командам и правам — [Commands-and-Permissions](Commands-and-Permissions.md).
