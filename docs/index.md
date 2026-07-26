@@ -5,7 +5,7 @@
 таблицы исходов, триггеры открытия и **хостед веб-редактор в стиле LuckPerms** — порты на игровом сервере
 открывать не надо.
 
-Автор: **AlexFirst** · Версия: **1.7.0** · Репозиторий: <https://github.com/AlexFirst404/AlexMenus>
+Автор: **AlexFirst** · Версия: **1.7.0** · Репозиторий и релизы: <https://github.com/AlexFirst404/alexmenus-editor>
 
 ---
 
