@@ -22,21 +22,34 @@ inventory-menu:
 | `inventory-menu.enabled` | `false` | `true` — при входе всем игрокам авто-показывается меню-по-умолчанию. |
 | `inventory-menu.default` | `""` | id `inventory`-меню для авто-показа. Из него переходят на другие через `open_menu`. Авто-показ **тихо** уважает `permission`/`open-requirement` меню (без спама deny всем). |
 
-## `editor` — веб-редактор (zero-config)
+## ~~`editor`~~ — блока больше нет
 
-Настройки хостед-редактора в стиле LuckPerms. Из коробки настраивать **ничего не надо** — см.
-[Web-Editor](Web-Editor.md).
+!!! danger "Удалено в 1.7.0"
+    Секции **`editor:` в `config.yml` больше не существует**. Адреса хостед-редактора и paste-воркера
+    **зашиты в плагин** и не настраиваются — `/am editor` работает сразу после установки, настраивать
+    нечего.
+
+    Если блок `editor:` остался в твоём старом конфиге — ничего не сломается: плагин **один раз напишет
+    предупреждение в лог** и проигнорирует его. Блок можно спокойно удалить.
+
+Подробности — [Web-Editor](Web-Editor.md).
+
+## `input-slots` — слоты для вещей игрока
+
+Поведение ячеек, куда игрок кладёт **свои** предметы (`input:` у элемента меню, см.
+[Input-Slots](Input-Slots.md)).
 
 ```yaml
-editor:
-  worker-url: ""      # paste-сервис. ПУСТО = общий публичный воркер
-  url: "https://alexfirst404.github.io/alexmenus-editor/"   # адрес хостед-редактора
+input-slots:
+  deny-creative: true   # не принимать вещи из креатива
 ```
 
 | Ключ | По умолчанию | Назначение |
 |---|---|---|
-| `editor.worker-url` | `""` | Адрес Cloudflare Worker (paste-сервис). Пусто = общий публичный воркер; свой — разверни из `cloudflare-worker/`. |
-| `editor.url` | оф. GitHub Pages | Адрес хостед-редактора, в ссылку которого подставляется код (`<url>#<код>`). |
+| `input-slots.deny-creative` | `true` | `true` — не принимать в input-слот вещи, положенные игроком в **креативном** режиме: там стек бесконечный, и на выходе это дюп. `false` — принимать (на свой страх и риск). |
+
+> Возврат предметов (закрытие, выход, смерть, `/am reload`, краш сервера) настройками не управляется — он
+> безусловен. Снимки лежат в `plugins/AlexMenus/pending/` и удаляются сразу после выдачи.
 
 ## `cooldowns` — антиспам-задержки (мс)
 
@@ -111,21 +124,22 @@ open-items: true
 
 ## `messages` — тексты плагина
 
-Настраиваемые строки, которые шлёт плагин. Формат — **MiniMessage + легаси `&`-коды** (как заголовки/лор,
-см. [Menu-Types](Menu-Types.md)). Ко всем сообщениям спереди добавляется `prefix` (кроме самого `prefix`).
-Отсутствующий ключ берётся из встроенных значений по умолчанию.
+Настраиваемые строки, которые шлёт плагин. Формат — привычные **легаси `&`-коды** (`&c`, `&l`, `&r`), hex
+(`&#ff8800` или просто `#ff8800`), Bungee-hex (`&x&f&f&8&8&0&0`) **и** любые теги MiniMessage; всё это можно
+мешать в одной строке (см. [Menu-Types](Menu-Types.md)). Ко всем сообщениям спереди добавляется `prefix`
+(кроме самого `prefix`). Отсутствующий ключ берётся из встроенных значений по умолчанию.
 
 ```yaml
 messages:
-  prefix: "<gray>[<gold>AlexMenus</gold>]</gray> "
-  no-permission: "<red>Недостаточно прав."
-  menu-not-found: "<red>Меню не найдено: {menu}"
-  players-only: "<red>Только для игроков."
-  reloaded: "<green>Перезагружено: {count} меню."
-  on-cooldown: "<red>Подожди немного."
-  applied: "<green>Применено: {count} меню."
-  apply-failed: "<red>Не удалось применить код."
-  invalid-code: "<red>Неверный код."
+  prefix: "&7[&6AlexMenus&7]&r "
+  no-permission: "&cНедостаточно прав."
+  menu-not-found: "&cМеню не найдено: {menu}"
+  players-only: "&cТолько для игроков."
+  reloaded: "&aПерезагружено: {count} меню."
+  on-cooldown: "&cПодожди немного."
+  applied: "&aПрименено: {count} меню."
+  apply-failed: "&cНе удалось применить код."
+  invalid-code: "&cНеверный код."
 ```
 
 | Ключ | Плейсхолдеры | Где используется |
@@ -150,10 +164,6 @@ inventory-menu:
   enabled: false
   default: ""
 
-editor:
-  worker-url: ""
-  url: "https://alexfirst404.github.io/alexmenus-editor/"
-
 cooldowns:
   click-ms: 0
   open-ms: 0
@@ -164,22 +174,26 @@ sounds:
   click: ""
   deny: ""
 
+input-slots:
+  deny-creative: true
+
 debug: false
 update-checker: true
 open-items: true
 
 messages:
-  prefix: "<gray>[<gold>AlexMenus</gold>]</gray> "
-  no-permission: "<red>Недостаточно прав."
-  menu-not-found: "<red>Меню не найдено: {menu}"
-  players-only: "<red>Только для игроков."
-  reloaded: "<green>Перезагружено: {count} меню."
-  on-cooldown: "<red>Подожди немного."
-  applied: "<green>Применено: {count} меню."
-  apply-failed: "<red>Не удалось применить код."
-  invalid-code: "<red>Неверный код."
+  prefix: "&7[&6AlexMenus&7]&r "
+  no-permission: "&cНедостаточно прав."
+  menu-not-found: "&cМеню не найдено: {menu}"
+  players-only: "&cТолько для игроков."
+  reloaded: "&aПерезагружено: {count} меню."
+  on-cooldown: "&cПодожди немного."
+  applied: "&aПрименено: {count} меню."
+  apply-failed: "&cНе удалось применить код."
+  invalid-code: "&cНеверный код."
 ```
 
 Связанные страницы: [Menu-Types](Menu-Types.md) (типы меню и цвета), [Advanced-Menu-Options](Advanced-Menu-Options.md)
-(меню-специфичные ключи), [Commands-and-Permissions](Commands-and-Permissions.md) (`/am reload`, `/am info`),
-[Web-Editor](Web-Editor.md) (редактор и self-host воркера).
+(меню-специфичные ключи), [Input-Slots](Input-Slots.md) (`input-slots.deny-creative`),
+[Commands-and-Permissions](Commands-and-Permissions.md) (`/am reload`, `/am info`),
+[Web-Editor](Web-Editor.md) (редактор — настраивать нечего).

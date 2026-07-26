@@ -45,6 +45,8 @@ items:
           amount: 1
         - type: message
           text: "<green>Куплено! <gray>(-100$)"
+        # ↑ порядок важен: если take_money не смог списать, ни give_item,
+        #   ни это сообщение не выполнятся (см. Actions → «Оплата обрывает цепочку»)
 
   # Покупка уровней опыта.
   '13':
@@ -288,5 +290,101 @@ items:
         - type: refresh
 ```
 
-Дальше: [Requirements](Requirements.md) — все типы условий; [Actions](Actions.md) — все действия;
-[Web-Editor](Web-Editor.md) — собрать такое мышкой.
+## 5. Кейс с ключом — `menus/case.yml`
+
+Игрок кладёт **свой** ключ в input-слот и жмёт на сундук. Ключ сгорает, бросается **ровно один** приз по
+весам. Полное описание input-слотов — [Input-Slots](Input-Slots.md).
+
+```yaml
+type: chest
+title: "&8» &dКейс"
+rows: 3
+commands: [case, кейс]
+command-description: "Открыть кейс"
+
+items:
+  # Кнопка. На input-слоте clicks НЕ работают — логику вешаем на соседний элемент.
+  '11':
+    material: CHEST
+    name: "&dОткрыть кейс"
+    lore:
+      - "&7Положи ключ справа и нажми."
+    click-requirement:
+      require:
+        type: slot_matches
+        slot: 13
+        material: TRIPWIRE_HOOK
+        name-contains: "Ключ"
+      deny:
+        - type: message
+          text: "&cНужен именной ключ в слоте."
+        - type: sound
+          sound: "minecraft:block.chest.locked"
+    clicks:
+      any:
+        - type: clear_slot          # ключ сгорает
+          slot: 13
+        - type: sound
+          sound: "minecraft:block.chest.open"
+        - type: outcome
+          outcomes:
+            - weight: 70            # веса нормируются суммой, это не проценты
+              actions:
+                - type: give_item
+                  material: IRON_INGOT
+                  amount: 8
+                - type: message
+                  text: "&7Обычный приз: &f8 железа."
+            - weight: 25
+              actions:
+                - type: give_item
+                  material: DIAMOND
+                  amount: 3
+                - type: message
+                  text: "&bРедкий приз: &f3 алмаза!"
+            - weight: 5
+              actions:
+                - type: give_item
+                  material: NETHERITE_INGOT
+                  name: "&6Слиток удачи"
+                  hide-all: true
+                - type: broadcast
+                  text: "&d%player_name% &7выбил &6легендарный приз&7!"
+                - type: sound
+                  sound: "minecraft:ui.toast.challenge_complete"
+
+  # Сам input-слот: сюда игрок кладёт ключ.
+  '13':
+    input:
+      accept:
+        - material: TRIPWIRE_HOOK
+          name-contains: "Ключ"
+      max-amount: 1
+      placeholder:
+        material: GRAY_STAINED_GLASS_PANE
+        name: "&7Положи сюда ключ"
+      on-reject:
+        - type: message
+          text: "&cЭто не ключ от кейса."
+
+  '15':
+    material: HOPPER
+    name: "&eЗабрать ключ"
+    clicks:
+      any:
+        - type: give_slot
+          slot: 13
+
+  '22':
+    material: BARRIER
+    name: "&cЗакрыть"
+    clicks:
+      any:
+        - type: close
+```
+
+> Ключ из слота **не потеряется**: он вернётся при закрытии меню, выходе, смерти, `/am reload` и даже после
+> краша сервера. Единственное место, где он исчезает — явный `clear_slot` (это и есть «кейс открыт»).
+
+Дальше: [Input-Slots](Input-Slots.md) — полный пример кузницы; [Requirements](Requirements.md) — все типы
+условий; [Actions](Actions.md) — все действия; [Web-Editor](Web-Editor.md) — собрать такое мышкой.

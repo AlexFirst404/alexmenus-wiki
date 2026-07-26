@@ -1,10 +1,48 @@
 # AlexMenus
 
 **AlexMenus** — лёгкий движок **меню** для **Paper 1.21.11** (Java 21). Поддерживает сундук-GUI и меню
-прямо в инвентаре игрока, действия по клику, требования (requirements), триггеры открытия и **хостед
-веб-редактор в стиле LuckPerms** — порты на игровом сервере открывать не надо.
+прямо в инвентаре игрока, **слоты для вещей игрока**, действия по клику, требования (requirements),
+таблицы исходов, триггеры открытия и **хостед веб-редактор в стиле LuckPerms** — порты на игровом сервере
+открывать не надо.
 
-Автор: **AlexFirst** · Версия: **1.4.0** · Репозиторий: <https://github.com/AlexFirst404/AlexMenus>
+Автор: **AlexFirst** · Версия: **1.7.0** · Репозиторий: <https://github.com/AlexFirst404/AlexMenus>
+
+---
+
+## Что нового в 1.7.0
+
+- 🆕 **[Input-слоты](Input-Slots.md)** — ячейка, куда игрок кладёт **свой** предмет: кузница, обмен, кейсы.
+  Предмет возвращается при закрытии, выходе, смерти, `/am reload` и переживает краш сервера.
+- 🆕 **Таблицы исходов**: действие [`outcome`](Actions.md) выбирает **ровно одну** ветку по весам
+  (`60/35/5` == `12/7/1`).
+- 🆕 **Дробный `chance`**: `chance: 12.5` теперь честные 12.5 % (раньше молча означало «всегда»). Появилось
+  и требование [`chance`](Requirements.md) — его можно класть внутрь `all`/`any`/`not`.
+- 🆕 **Новые действия**: [`take_item`, `modify_slot`, `set_slot`, `clear_slot`, `give_slot`](Actions.md).
+  `modify_slot` правит предмет игрока **на месте**, сохраняя зачарования, прочность и чужой NBT.
+- 🆕 **Новые требования**: [`slot_empty`, `slot_filled`, `slot_matches`](Requirements.md).
+- 🔧 **Блок `editor:` удалён из конфига** — адреса редактора и paste-воркера зашиты в плагин, настраивать
+  нечего (см. [Web-Editor](Web-Editor.md)).
+- 🔧 **Оплата стала настоящим гейтом**: провалившееся списание отменяет всё, что после него.
+
+!!! danger "Что может сломать существующие меню"
+    **1. `has_item` больше не видит броню и офф-хенд.** Требование смотрит только **36 основных слотов**
+    (хотбар + основной инвентарь). Гейт вида «надет `DIAMOND_HELMET`» через `has_item` **перестанет
+    срабатывать** — проверяй экипировку плейсхолдером. Причина: списание `take_item` брони и офф-хенда
+    никогда не касалось, а гейт их видел — плату можно было держать в левой руке и получать награду даром.
+
+    **2. Провал `take_item` / `take_money` / `take_exp` прерывает цепочку.** Всё, что стоит после
+    неудавшегося списания, **не выполнится** — включая сообщения вроде «Куплено!» и выдачу товара. Раньше
+    награда выдавалась бесплатно. Проверь порядок действий в своих меню: списание должно идти **первым**.
+
+    **3. `take_money` без Vault больше не пропускает покупку.** Нет Vault или провайдера экономики — ничего
+    не списано и **ничего не выдано** (раньше — выдано бесплатно).
+
+    **4. Шифт-клик и цифровые клавиши глушатся везде, пока активно инвентарное меню** (`type: inventory`) —
+    включая открытые поверх сундуки. Это **возврат к поведению до 1.7.0**, закрывающий дупликацию пунктов
+    меню. Если `inventory-menu.enabled: false` (по умолчанию) — тебя это не касается.
+
+    **5. Блок `editor:` в `config.yml` игнорируется** — плагин пишет предупреждение в лог. Ничего не
+    ломается, но подменить адреса через конфиг больше нельзя. Секцию можно удалить.
 
 ---
 
@@ -12,22 +50,29 @@
 
 - **Два бэкенда меню**: `chest` (сундук-GUI через шейдённый InvUI, 1–6 рядов) и `inventory` (меню в основных
   27 слотах инвентаря игрока).
+- **Input-слоты**: ячейки для **вещей игрока** с фильтрами приёма (`accept`), лимитом стека,
+  фоном-подсказкой и реакциями `on-insert`/`on-extract`/`on-reject`. Потерять предмет нельзя — см.
+  [Input-Slots](Input-Slots.md).
 - **Действия по типу клика**: `run_command`, `message`, `broadcast`, `title`, `actionbar`, `open_menu`,
   `back`, `refresh`, `close`, `sound`, `connect`/`server`, `give_item`, `give_money`/`take_money`,
-  `give_exp`/`take_exp`, `give_permission`/`take_permission`, `conditional`. У любого действия — модификаторы
-  `chance` (шанс) и `delay` (задержка в тиках).
+  `give_exp`/`take_exp`, `take_item`, `give_permission`/`take_permission`, `conditional`, `outcome`,
+  `set_slot`/`modify_slot`/`clear_slot`/`give_slot`. У любого действия — модификаторы `chance` (шанс, с
+  дробями) и `delay` (задержка в тиках).
 - **Requirements-движок**: три места условий (`view-requirement`, `click-requirement`, `open-requirement`),
-  типы `permission`, `placeholder`, `money`, `has_item`, `exp`, композиты `all`/`any`/`not`, флаг `negate`.
+  типы `permission`, `placeholder`, `money`, `has_item`, `exp`, `chance`,
+  `slot_empty`/`slot_filled`/`slot_matches`, композиты `all`/`any`/`not`, флаг `negate`.
 - **Продвинутые опции меню**: `update-interval` (живое обновление плейсхолдеров), `args` (аргументы команды →
   `{имя}`/`{argN}`/`{args}`), `open-item` (предмет-открывашка в хотбаре), `open-animation` (пошаговое
   появление предметов).
-- **Цвета вперемешку**: легаси `&c&l`, hex `&#ff8800`, Bungee `&x&f&f…` и MiniMessage `<gradient:…>`.
+- **Цвета вперемешку**: по умолчанию везде привычные легаси-коды `&c&l`, hex `&#ff8800` и просто `#ff8800`,
+  Bungee `&x&f&f…` — плюс любые теги MiniMessage (`<gradient:…>`, `<hover>`, `<click>`) в той же строке.
 - **Настоящие команды меню**: список `commands:` регистрируется как реальные Bukkit-команды (tab-комплит,
   `/help`, права).
 - **Триггеры открытия**: своя команда, `/am open`, предмет с PDC-тегом (ПКМ), Java-API через ServicesManager.
-- **Веб-редактор**: `/am editor` → правки в браузере → `/am apply <код>`. Только исходящие HTTPS.
-- **Гибкая конфигурация**: кулдауны кликов/открытий, стандартные звуки, настраиваемые сообщения
-  (MiniMessage), debug, проверка обновлений (`/am info`) — см. [Configuration](Configuration.md).
+- **Веб-редактор**: `/am editor` → правки в браузере → `/am apply <код>`. Только исходящие HTTPS, ничего не
+  настраивается.
+- **Гибкая конфигурация**: кулдауны кликов/открытий, стандартные звуки, поведение input-слотов, настраиваемые
+  сообщения, debug, проверка обновлений (`/am info`) — см. [Configuration](Configuration.md).
 - **Мягкие интеграции**: PlaceholderAPI (`%...%`), Vault (экономика) и LuckPerms (права). Работают, если
   установлены; без них плагин не падает.
 
@@ -36,7 +81,7 @@
 1. Скачай `AlexMenus-<версия>.jar` из **Releases** репозитория.
 2. Положи в `plugins/` на Paper 1.21.11.
 3. `/reload` (или перезапуск сервера). Появится папка `plugins/AlexMenus/` с `config.yml` и примерами
-   `menus/sample.yml`, `menus/shop.yml`.
+   `menus/sample.yml`, `menus/shop.yml`, `menus/forge.yml`.
 4. (Опционально) Поставь **PlaceholderAPI** и **Vault** + плагин экономики — это мягкие зависимости
    (`softdepend`), нужны только для плейсхолдеров и денежных функций.
 
@@ -47,11 +92,12 @@
 - [Getting-Started](Getting-Started.md) — первое меню, структура папок, редактор, reload.
 - [Menu-Types](Menu-Types.md) — `chest` против `inventory`, ряды, заголовок, цвета.
 - [Items-and-Clicks](Items-and-Clicks.md) — поля предмета и типы клика.
+- [Input-Slots](Input-Slots.md) — ячейки для вещей игрока: кузница, фильтры, сохранность, ограничения.
 - [Advanced-Menu-Options](Advanced-Menu-Options.md) — `update-interval`, `args`, `open-item`, `open-animation`.
 - [Requirements](Requirements.md) — условия: три места, все типы, рецепты.
-- [Actions](Actions.md) — все действия с параметрами и примерами, `chance`/`delay`.
+- [Actions](Actions.md) — все действия с параметрами и примерами, `chance`/`delay`, `outcome`.
 - [Placeholders-and-Integrations](Placeholders-and-Integrations.md) — PlaceholderAPI, Vault, LuckPerms, командные плагины.
-- [Configuration](Configuration.md) — `config.yml`: кулдауны, звуки, сообщения, debug, обновления.
+- [Configuration](Configuration.md) — `config.yml`: кулдауны, звуки, input-слоты, сообщения, debug, обновления.
 - [Commands-and-Permissions](Commands-and-Permissions.md) — `/am`, команды меню, права.
-- [Web-Editor](Web-Editor.md) — как работает редактор, self-host воркера.
+- [Web-Editor](Web-Editor.md) — как работает редактор (настраивать нечего).
 - [Examples](Examples.md) — готовые аннотированные YAML-меню.
