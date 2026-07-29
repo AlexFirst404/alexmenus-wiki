@@ -17,7 +17,7 @@ Requirements-движок (`action/RequirementEvaluator.java`) — сердце 
     которое умеет объяснить отказ. Порядок при входе в меню: сначала `permission:`, потом
     `open-requirement` (его `deny:` выполняется только если право уже прошло).
 
-    С **1.10.0** оба гейта работают на **любом** пути открытия, включая действие [`open_menu`](Actions.md) и
+    С **1.9.0** оба гейта работают на **любом** пути открытия, включая действие [`open_menu`](Actions.md) и
     Java-API — раньше `permission:` держал только команду меню. Что могло сломаться — см.
     [Commands-and-Permissions](Commands-and-Permissions.md).
 

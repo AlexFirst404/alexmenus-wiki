@@ -400,7 +400,7 @@ commands: [modpanel]
 command-description: "Панель модератора"
 show-in-help: false
 
-# С 1.10.0 это право гейтит ВСЕ входы: команду, /am open, open_menu из другого меню и Java-API.
+# С 1.9.0 это право гейтит ВСЕ входы: команду, /am open, open_menu из другого меню и Java-API.
 permission: alexmenus.menu.mod
 
 open-animation:
@@ -474,7 +474,7 @@ items:
       command: "minecraft:{args}"  # ОТКЛОНЕНО тоже — проверяется весь первый токен
     - type: run_command
       as: console
-      command: "%papi_cmd% arg"    # ОТКЛОНЕНО с 1.10.0 (консоль сильнее оператора)
+      command: "%papi_cmd% arg"    # ОТКЛОНЕНО с 1.9.0 (консоль сильнее оператора)
     ```
     Игрок сам выбирал бы **команду**, которая выполнится с правами оператора. Плагин отключает такое
     действие при загрузке и пишет ошибку в лог с указанием меню и слота.

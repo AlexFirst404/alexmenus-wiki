@@ -99,8 +99,8 @@ permission: alexmenus.menu.vip
 [`open-requirement`](Requirements.md): `permission:` — статичное право, `open-requirement` — условие с
 deny-действиями.
 
-!!! danger "Ломающее изменение 1.10.0: `permission:` теперь действует и на `open_menu`"
-    До 1.10.0 `permission:` гейтил только **команду** меню. Меню с `permission: alexmenus.admin` при этом
+!!! danger "Ломающее изменение 1.9.0: `permission:` теперь действует и на `open_menu`"
+    До 1.9.0 `permission:` гейтил только **команду** меню. Меню с `permission: alexmenus.admin` при этом
     оставалось доступным через действие `open_menu` из любого незащищённого меню — узел выглядел так, будто
     он запирает меню, а на самом деле запирал только команду.
 
@@ -133,9 +133,9 @@ deny-действиями.
 2. **`/am open <id>`** (и `/am preview <id>` для админа).
 3. **Предмет с PDC-тегом** — ПКМ предметом, выданным `give_item` с полем `menu` (нужны `alexmenus.use` и
    право меню). См. [Actions](Actions.md).
-4. **Действие [`open_menu`](Actions.md)** из другого меню — с 1.10.0 тоже проверяет `permission:` целевого
+4. **Действие [`open_menu`](Actions.md)** из другого меню — с 1.9.0 тоже проверяет `permission:` целевого
    меню.
-5. **Java-API** — `AlexMenusApi` из Bukkit ServicesManager (с 1.10.0 `openMenu` тоже проходит через
+5. **Java-API** — `AlexMenusApi` из Bukkit ServicesManager (с 1.9.0 `openMenu` тоже проходит через
    `permission:` меню):
 
 ```java
