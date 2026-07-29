@@ -386,5 +386,99 @@ items:
 > Ключ из слота **не потеряется**: он вернётся при закрытии меню, выходе, смерти, `/am reload` и даже после
 > краша сервера. Единственное место, где он исчезает — явный `clear_slot` (это и есть «кейс открыт»).
 
-Дальше: [Input-Slots](Input-Slots.md) — полный пример кузницы; [Requirements](Requirements.md) — все типы
-условий; [Actions](Actions.md) — все действия; [Web-Editor](Web-Editor.md) — собрать такое мышкой.
+## 6. Панель модератора: `as: op` + анимации — `menus/modpanel.yml`
+
+Меню закрыто правом, раскрывается спиралью, кнопки мигают кадрами, а команды выполняются **от имени
+модератора с правами оператора**. Полное описание — [Actions](Actions.md) → `as: op` и
+[Анимации](Animations.md).
+
+```yaml
+type: chest
+title: "&8» &cПанель модератора"
+rows: 3
+commands: [modpanel]
+command-description: "Панель модератора"
+show-in-help: false
+
+# С 1.10.0 это право гейтит ВСЕ входы: команду, /am open, open_menu из другого меню и Java-API.
+permission: alexmenus.menu.mod
+
+open-animation:
+  type: spiral
+  speed: 150                 # 1 тик между шагами + 3 шага за тик
+  sound: "minecraft:ui.button.click"
+
+items:
+  # Мигающая красная кнопка: кадр 2 меняет ТОЛЬКО материал, остальное наследуется.
+  '11':
+    material: REDSTONE_BLOCK
+    name: "&cВключить режим ЧС"
+    lore:
+      - "&7Выполнится с правами оператора."
+    hide-all: true
+    animation:
+      interval: 8
+      loop: pingpong
+      frames:
+        - {}                          # базовый предмет
+        - material: NETHERRACK
+    clicks:
+      any:
+        # Команда фиксирована, подстановок нет — предупреждений в логе тоже не будет.
+        - type: run_command
+          as: op
+          command: "whitelist on"
+        - type: message
+          text: "&cРежим ЧС включён."
+
+  # Пример с подстановкой в АРГУМЕНТАХ: разрешено, но при загрузке будет предупреждение в лог.
+  '13':
+    material: PAPER
+    name: "&eВыдать себе набор"
+    animation:
+      interval: 10
+      frames:
+        - name: "&eВыдать себе набор"
+        - name: "&6Выдать себе набор"
+    clicks:
+      any:
+        # Имя команды — give, подстановка только в аргументе. Разрешено; в логе будет предупреждение.
+        - type: run_command
+          as: op
+          command: "give %player_name% golden_apple 4"
+
+  '15':
+    material: CLOCK
+    name: "&aTPS: &f%server_tps_1%"
+    lore:
+      - "&7Онлайн: &f%server_online%"
+    clicks:
+      any:
+        - type: refresh
+
+  '22':
+    material: BARRIER
+    name: "&cЗакрыть"
+    clicks:
+      any:
+        - type: close
+```
+
+!!! danger "Так писать НЕЛЬЗЯ"
+    ```yaml
+    - type: run_command
+      as: op
+      command: "{args}"            # ОТКЛОНЕНО при загрузке
+    - type: run_command
+      as: op
+      command: "minecraft:{args}"  # ОТКЛОНЕНО тоже — проверяется весь первый токен
+    - type: run_command
+      as: console
+      command: "%papi_cmd% arg"    # ОТКЛОНЕНО с 1.10.0 (консоль сильнее оператора)
+    ```
+    Игрок сам выбирал бы **команду**, которая выполнится с правами оператора. Плагин отключает такое
+    действие при загрузке и пишет ошибку в лог с указанием меню и слота.
+
+Дальше: [Input-Slots](Input-Slots.md) — полный пример кузницы; [Анимации](Animations.md) — кадры и узоры
+раскрытия; [Requirements](Requirements.md) — все типы условий; [Actions](Actions.md) — все действия;
+[Web-Editor](Web-Editor.md) — собрать такое мышкой.
