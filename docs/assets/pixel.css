@@ -1,0 +1,26 @@
+/*
+ * Логотип — пиксель-арт 16x16. Браузер по умолчанию сглаживает изображения при масштабировании,
+ * из-за чего такая графика превращается в мыло. image-rendering: pixelated отключает сглаживание
+ * и оставляет пиксели квадратными на любом размере и на HiDPI-экранах.
+ *
+ * Для SVG то же самое делает shape-rendering: crispEdges (он уже прописан внутри самого файла),
+ * но правило ниже страхует на случай, если где-то будет использован PNG.
+ */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg,
+.md-nav__title .md-logo img,
+.md-nav__title .md-logo svg,
+img.pixel {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;   /* запасной вариант для старых сборок Firefox */
+  shape-rendering: crispEdges;
+}
+
+/* В шапке Material логотип живёт в боксе 24x24 — на 16x16 арте это дробный масштаб (1.5x),
+   из-за которого часть пикселей была бы вдвое шире соседних. 24px кратно 16 только при 1.5,
+   поэтому фиксируем 32px: ровно 2 пикселя на пиксель, сетка остаётся равномерной. */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: 2rem;
+  height: 2rem;
+}

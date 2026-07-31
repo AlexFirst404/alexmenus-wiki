@@ -8,6 +8,10 @@ docs_dir: docs
 theme:
   name: material
   language: ru
+  # SVG-логотип: пиксель-арт, отрисованный прямоугольниками, поэтому он резкий на любом размере
+  # и на любом DPI. Фавиконка — PNG ровно 32x32 (кратно исходным 16), без промежуточных оттенков.
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
   palette:
     - scheme: slate
       primary: deep orange
@@ -29,6 +33,9 @@ theme:
     - search.highlight
     - content.code.copy
     - toc.follow
+
+extra_css:
+  - assets/pixel.css
 
 markdown_extensions:
   - admonition
