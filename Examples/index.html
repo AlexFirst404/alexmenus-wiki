@@ -1,0 +1,1376 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документация плагина AlexMenus — движок меню для Paper 1.21.11">
+      
+      
+      
+        <link rel="canonical" href="https://alexfirst404.github.io/alexmenus-wiki/Examples/">
+      
+      
+        <link rel="prev" href="../Web-Editor/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Примеры - AlexMenus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/pixel.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href=".." title="AlexMenus" class="md-header__button md-logo" aria-label="AlexMenus" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlexMenus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Примеры
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AlexFirst404/alexmenus-editor" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlexFirst404/alexmenus-editor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AlexMenus" class="md-nav__button md-logo" aria-label="AlexMenus" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    AlexMenus
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AlexFirst404/alexmenus-editor" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlexFirst404/alexmenus-editor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Начало работы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Настройки (config.yml)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Menu-Types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Типы меню
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Items-and-Clicks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Предметы и клики
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Input-Slots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-слоты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Анимации
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Условия (requirements)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Advanced-Menu-Options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширенные опции меню
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Placeholders-and-Integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Плейсхолдеры и интеграции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commands-and-Permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Команды и права
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web-Editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Веб-редактор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Примеры
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Примеры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-requirements-menusshopyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Магазин с requirements — menus/shop.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-menuswarpsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Меню варпов — menus/warps.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inventory-hud-menushudyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Inventory-HUD — menus/hud.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conditional-menushubyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Хаб с навигацией и conditional — menus/hub.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-menuscaseyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Кейс с ключом — menus/case.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-as-op-menusmodpanelyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Панель модератора: as: op + анимации — menus/modpanel.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-requirements-menusshopyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Магазин с requirements — menus/shop.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-menuswarpsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Меню варпов — menus/warps.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inventory-hud-menushudyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Inventory-HUD — menus/hud.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conditional-menushubyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Хаб с навигацией и conditional — menus/hub.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-menuscaseyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Кейс с ключом — menus/case.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-as-op-menusmodpanelyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Панель модератора: as: op + анимации — menus/modpanel.yml
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">Примеры<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Готовые, аннотированные меню. Клади файлы в <code>plugins/AlexMenus/menus/</code> и делай <code>/am reload</code>. Ключи и
+поведение соответствуют парсеру; см. <a href="../Items-and-Clicks/">Items-and-Clicks</a>, <a href="../Actions/">Actions</a>,
+<a href="../Requirements/">Requirements</a>.</p>
+<h2 id="1-requirements-menusshopyml">1. Магазин с requirements — <code>menus/shop.yml</code><a class="headerlink" href="#1-requirements-menusshopyml" title="Permanent link">&para;</a></h2>
+<p>Меню открывается только с правом; покупки гейтятся деньгами; один предмет виден лишь богатым.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Магазин&quot;</span>
+<span class="nt">rows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">shop</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">магазин</span><span class="p p-Indicator">]</span><span class="w">                 </span><span class="c1"># /shop и /магазин</span>
+<span class="nt">command-description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Открыть</span><span class="nv"> </span><span class="s">магазин&quot;</span>
+
+<span class="c1"># Гейт открытия: нужен пермишен, иначе deny-сообщение и меню не откроется.</span>
+<span class="nt">open-requirement</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">require</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">permission</span>
+<span class="w">    </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alexmenus.shop.use</span>
+<span class="w">  </span><span class="nt">deny</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;red&gt;Нет</span><span class="nv"> </span><span class="s">доступа</span><span class="nv"> </span><span class="s">к</span><span class="nv"> </span><span class="s">магазину.&quot;</span>
+
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Покупка за деньги (Vault): click-requirement проверяет баланс, действия его списывают.</span>
+<span class="w">  </span><span class="s">&#39;11&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOLDEN_APPLE</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Золотое</span><span class="nv"> </span><span class="s">яблоко</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">100$&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;ЛКМ</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">купить</span><span class="nv"> </span><span class="s">за</span><span class="nv"> </span><span class="s">&lt;green&gt;100$&quot;</span>
+<span class="w">    </span><span class="nt">click-requirement</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">require</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">money</span><span class="p p-Indicator">,</span><span class="nt"> amount</span><span class="p">:</span><span class="w"> </span><span class="nv">100</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">      </span><span class="nt">deny</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;red&gt;Недостаточно</span><span class="nv"> </span><span class="s">денег</span><span class="nv"> </span><span class="s">(нужно</span><span class="nv"> </span><span class="s">100$).&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_money</span>
+<span class="w">          </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span>
+<span class="w">          </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOLDEN_APPLE</span>
+<span class="w">          </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Куплено!</span><span class="nv"> </span><span class="s">&lt;gray&gt;(-100$)&quot;</span>
+<span class="w">        </span><span class="c1"># ↑ порядок важен: если take_money не смог списать, ни give_item,</span>
+<span class="w">        </span><span class="c1">#   ни это сообщение не выполнятся (см. Actions → «Оплата обрывает цепочку»)</span>
+
+<span class="w">  </span><span class="c1"># Покупка уровней опыта.</span>
+<span class="w">  </span><span class="s">&#39;13&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXPERIENCE_BOTTLE</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;+5</span><span class="nv"> </span><span class="s">уровней</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">50$&quot;</span>
+<span class="w">    </span><span class="nt">click-requirement</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">require</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">money</span><span class="p p-Indicator">,</span><span class="nt"> amount</span><span class="p">:</span><span class="w"> </span><span class="nv">50</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">      </span><span class="nt">deny</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;red&gt;Нужно</span><span class="nv"> </span><span class="s">50$.&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_money</span>
+<span class="w">          </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_exp</span>
+<span class="w">          </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">          </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;+5</span><span class="nv"> </span><span class="s">уровней!&quot;</span>
+
+<span class="w">  </span><span class="c1"># Виден только если баланс &gt;= 1000 (через плейсхолдер Vault).</span>
+<span class="w">  </span><span class="s">&#39;15&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NETHER_STAR</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;light_purple&gt;Для</span><span class="nv"> </span><span class="s">богатых&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;Виден</span><span class="nv"> </span><span class="s">при</span><span class="nv"> </span><span class="s">балансе</span><span class="nv"> </span><span class="s">&lt;white&gt;&gt;=</span><span class="nv"> </span><span class="s">1000&quot;</span>
+<span class="w">    </span><span class="nt">view-requirement</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">placeholder</span>
+<span class="w">      </span><span class="nt">placeholder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;%vault_eco_balance%&quot;</span>
+<span class="w">      </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&gt;=&quot;</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;light_purple&gt;Ты</span><span class="nv"> </span><span class="s">богат!&quot;</span>
+
+<span class="w">  </span><span class="s">&#39;22&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ARROW</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;yellow&gt;Назад&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">back</span>
+</code></pre></div>
+<h2 id="2-menuswarpsyml">2. Меню варпов — <code>menus/warps.yml</code><a class="headerlink" href="#2-menuswarpsyml" title="Permanent link">&para;</a></h2>
+<p>Кнопки-телепорты через <code>run_command</code>, платный варп, звук при клике.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;aqua&gt;Телепорты&quot;</span>
+<span class="nt">rows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">warps</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">варпы</span><span class="p p-Indicator">]</span>
+<span class="nt">command-description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Открыть</span><span class="nv"> </span><span class="s">меню</span><span class="nv"> </span><span class="s">варпов&quot;</span>
+
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;10&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GRASS_BLOCK</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Спавн&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;ЛКМ</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">телепорт</span><span class="nv"> </span><span class="s">на</span><span class="nv"> </span><span class="s">спавн&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;spawn&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sound</span>
+<span class="w">          </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:entity.enderman.teleport&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close</span>
+
+<span class="w">  </span><span class="s">&#39;12&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DIAMOND_SWORD</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;red&gt;PvP-арена&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;ЛКМ</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">на</span><span class="nv"> </span><span class="s">арену&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;warp</span><span class="nv"> </span><span class="s">pvp&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close</span>
+
+<span class="w">  </span><span class="c1"># Платный варп в шахты: списываем деньги, только если хватает.</span>
+<span class="w">  </span><span class="s">&#39;14&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IRON_PICKAXE</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Шахты</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">25$&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;ЛКМ</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">телепорт</span><span class="nv"> </span><span class="s">за</span><span class="nv"> </span><span class="s">&lt;green&gt;25$&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">click-requirement</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">require</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">money</span><span class="p p-Indicator">,</span><span class="nt"> amount</span><span class="p">:</span><span class="w"> </span><span class="nv">25</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">      </span><span class="nt">deny</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;red&gt;Нужно</span><span class="nv"> </span><span class="s">25$</span><span class="nv"> </span><span class="s">для</span><span class="nv"> </span><span class="s">телепорта.&quot;</span>
+<span class="w">      </span><span class="nt">success</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sound</span>
+<span class="w">          </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:entity.experience_orb.pickup&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_money</span>
+<span class="w">          </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;warp</span><span class="nv"> </span><span class="s">mines&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close</span>
+
+<span class="w">  </span><span class="c1"># VIP-варп: кнопка видна только VIP.</span>
+<span class="w">  </span><span class="s">&#39;16&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BEACON</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;light_purple&gt;VIP-остров&quot;</span>
+<span class="w">    </span><span class="nt">view-requirement</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">permission</span>
+<span class="w">      </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alexmenus.vip</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;warp</span><span class="nv"> </span><span class="s">vipisland&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close</span>
+
+<span class="w">  </span><span class="s">&#39;22&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BARRIER</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;red&gt;Закрыть&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close</span>
+</code></pre></div>
+<h2 id="3-inventory-hud-menushudyml">3. Inventory-HUD — <code>menus/hud.yml</code><a class="headerlink" href="#3-inventory-hud-menushudyml" title="Permanent link">&para;</a></h2>
+<p>Меню в основном инвентаре игрока. Слоты в YAML — <strong>0..26</strong> (ложатся в слоты инвентаря 9–35).</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inventory</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HUD&quot;</span><span class="w">                    </span><span class="c1"># у inventory-меню не отображается как заголовок окна</span>
+
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;0&#39;</span><span class="p p-Indicator">:</span><span class="w">                          </span><span class="c1"># физически слот 9 инвентаря</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COMPASS</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Спавн&quot;</span>
+<span class="w">    </span><span class="nt">hide-all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;spawn&quot;</span>
+
+<span class="w">  </span><span class="s">&#39;4&#39;</span><span class="p p-Indicator">:</span><span class="w">                          </span><span class="c1"># центр верхнего ряда меню-зоны</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NETHER_STAR</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Меню</span><span class="nv"> </span><span class="s">сервера&quot;</span>
+<span class="w">    </span><span class="nt">hide-all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">open_menu</span>
+<span class="w">          </span><span class="nt">menu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shop</span>
+
+<span class="w">  </span><span class="s">&#39;8&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAYER_HEAD</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;yellow&gt;%player_name%&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;Баланс:</span><span class="nv"> </span><span class="s">&lt;green&gt;%vault_eco_balance%&quot;</span>
+<span class="w">    </span><span class="nt">hide-all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">refresh</span><span class="w">          </span><span class="c1"># обновить лор (пере-вычислить плейсхолдеры)</span>
+
+<span class="w">  </span><span class="s">&#39;26&#39;</span><span class="p p-Indicator">:</span><span class="w">                         </span><span class="c1"># физически слот 35 инвентаря</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RED_DYE</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;red&gt;Скрыть</span><span class="nv"> </span><span class="s">HUD&quot;</span>
+<span class="w">    </span><span class="nt">hide-all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;am</span><span class="nv"> </span><span class="s">invclose&quot;</span>
+</code></pre></div>
+<p>Чтобы этот HUD показывался всем при входе — в <code>config.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">inventory-menu</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hud</span>
+</code></pre></div>
+<p>⚠️ Inventory-меню экспериментально — читай предупреждения в <a href="../Menu-Types/">Menu-Types</a> (слоты 9–35 становятся
+«только меню», реальные вещи оттуда при первом показе выпадают игроку).</p>
+<h2 id="4-conditional-menushubyml">4. Хаб с навигацией и conditional — <code>menus/hub.yml</code><a class="headerlink" href="#4-conditional-menushubyml" title="Permanent link">&para;</a></h2>
+<p>Центральное меню: переходы в под-меню, ветвление по VIP, платная награда с шансом.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gradient:#ff5555:#ffaa00&gt;Хаб&lt;/gradient&gt;&quot;</span>
+<span class="nt">rows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">hub</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">меню</span><span class="p p-Indicator">]</span>
+<span class="nt">command-description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Главное</span><span class="nv"> </span><span class="s">меню</span><span class="nv"> </span><span class="s">сервера&quot;</span>
+
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;11&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EMERALD</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Магазин&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">open_menu</span>
+<span class="w">          </span><span class="nt">menu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shop</span>
+
+<span class="w">  </span><span class="s">&#39;13&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENDER_PEARL</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;aqua&gt;Варпы&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">open_menu</span>
+<span class="w">          </span><span class="nt">menu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">warps</span>
+
+<span class="w">  </span><span class="c1"># Ветвление: VIP видит благодарность, остальные — предложение купить VIP.</span>
+<span class="w">  </span><span class="s">&#39;15&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NETHER_STAR</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;light_purple&gt;Статус&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conditional</span>
+<span class="w">          </span><span class="nt">requirement</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">permission</span>
+<span class="w">            </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alexmenus.vip</span>
+<span class="w">          </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">              </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;aqua&gt;Спасибо</span><span class="nv"> </span><span class="s">за</span><span class="nv"> </span><span class="s">VIP!&quot;</span>
+<span class="w">          </span><span class="nt">else</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">              </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;Купи</span><span class="nv"> </span><span class="s">VIP</span><span class="nv"> </span><span class="s">на</span><span class="nv"> </span><span class="s">сайте.&quot;</span>
+
+<span class="w">  </span><span class="c1"># Ежедневная награда с шансом бонуса и отложенным сообщением.</span>
+<span class="w">  </span><span class="s">&#39;22&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CHEST</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Награда&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_money</span>
+<span class="w">          </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span><span class="w">          </span><span class="c1"># бонус выпадает примерно в 20% случаев</span>
+<span class="w">          </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DIAMOND</span>
+<span class="w">          </span><span class="nt">chance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Награда</span><span class="nv"> </span><span class="s">получена!&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;Заходи</span><span class="nv"> </span><span class="s">завтра</span><span class="nv"> </span><span class="s">ещё.&quot;</span>
+<span class="w">          </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span><span class="w">                 </span><span class="c1"># через 2 секунды</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">refresh</span>
+</code></pre></div>
+<h2 id="5-menuscaseyml">5. Кейс с ключом — <code>menus/case.yml</code><a class="headerlink" href="#5-menuscaseyml" title="Permanent link">&para;</a></h2>
+<p>Игрок кладёт <strong>свой</strong> ключ в input-слот и жмёт на сундук. Ключ сгорает, бросается <strong>ровно один</strong> приз по
+весам. Полное описание input-слотов — <a href="../Input-Slots/">Input-Slots</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;8»</span><span class="nv"> </span><span class="s">&amp;dКейс&quot;</span>
+<span class="nt">rows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">case</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">кейс</span><span class="p p-Indicator">]</span>
+<span class="nt">command-description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Открыть</span><span class="nv"> </span><span class="s">кейс&quot;</span>
+
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Кнопка. На input-слоте clicks НЕ работают — логику вешаем на соседний элемент.</span>
+<span class="w">  </span><span class="s">&#39;11&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CHEST</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;dОткрыть</span><span class="nv"> </span><span class="s">кейс&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Положи</span><span class="nv"> </span><span class="s">ключ</span><span class="nv"> </span><span class="s">справа</span><span class="nv"> </span><span class="s">и</span><span class="nv"> </span><span class="s">нажми.&quot;</span>
+<span class="w">    </span><span class="nt">click-requirement</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">require</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slot_matches</span>
+<span class="w">        </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="w">        </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TRIPWIRE_HOOK</span>
+<span class="w">        </span><span class="nt">name-contains</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Ключ&quot;</span>
+<span class="w">      </span><span class="nt">deny</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cНужен</span><span class="nv"> </span><span class="s">именной</span><span class="nv"> </span><span class="s">ключ</span><span class="nv"> </span><span class="s">в</span><span class="nv"> </span><span class="s">слоте.&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sound</span>
+<span class="w">          </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:block.chest.locked&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clear_slot</span><span class="w">          </span><span class="c1"># ключ сгорает</span>
+<span class="w">          </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sound</span>
+<span class="w">          </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:block.chest.open&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outcome</span>
+<span class="w">          </span><span class="nt">outcomes</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">70</span><span class="w">            </span><span class="c1"># веса нормируются суммой, это не проценты</span>
+<span class="w">              </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span>
+<span class="w">                  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IRON_INGOT</span>
+<span class="w">                  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">                  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;7Обычный</span><span class="nv"> </span><span class="s">приз:</span><span class="nv"> </span><span class="s">&amp;f8</span><span class="nv"> </span><span class="s">железа.&quot;</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">              </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span>
+<span class="w">                  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DIAMOND</span>
+<span class="w">                  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">                  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;bРедкий</span><span class="nv"> </span><span class="s">приз:</span><span class="nv"> </span><span class="s">&amp;f3</span><span class="nv"> </span><span class="s">алмаза!&quot;</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">              </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span>
+<span class="w">                  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NETHERITE_INGOT</span>
+<span class="w">                  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;6Слиток</span><span class="nv"> </span><span class="s">удачи&quot;</span>
+<span class="w">                  </span><span class="nt">hide-all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">broadcast</span>
+<span class="w">                  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;d%player_name%</span><span class="nv"> </span><span class="s">&amp;7выбил</span><span class="nv"> </span><span class="s">&amp;6легендарный</span><span class="nv"> </span><span class="s">приз&amp;7!&quot;</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sound</span>
+<span class="w">                  </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:ui.toast.challenge_complete&quot;</span>
+
+<span class="w">  </span><span class="c1"># Сам input-слот: сюда игрок кладёт ключ.</span>
+<span class="w">  </span><span class="s">&#39;13&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">input</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">accept</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TRIPWIRE_HOOK</span>
+<span class="w">          </span><span class="nt">name-contains</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Ключ&quot;</span>
+<span class="w">      </span><span class="nt">max-amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">placeholder</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GRAY_STAINED_GLASS_PANE</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;7Положи</span><span class="nv"> </span><span class="s">сюда</span><span class="nv"> </span><span class="s">ключ&quot;</span>
+<span class="w">      </span><span class="nt">on-reject</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cЭто</span><span class="nv"> </span><span class="s">не</span><span class="nv"> </span><span class="s">ключ</span><span class="nv"> </span><span class="s">от</span><span class="nv"> </span><span class="s">кейса.&quot;</span>
+
+<span class="w">  </span><span class="s">&#39;15&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HOPPER</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;eЗабрать</span><span class="nv"> </span><span class="s">ключ&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_slot</span>
+<span class="w">          </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+
+<span class="w">  </span><span class="s">&#39;22&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BARRIER</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cЗакрыть&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close</span>
+</code></pre></div>
+<blockquote>
+<p>Ключ из слота <strong>не потеряется</strong>: он вернётся при закрытии меню, выходе, смерти, <code>/am reload</code> и даже после
+краша сервера. Единственное место, где он исчезает — явный <code>clear_slot</code> (это и есть «кейс открыт»).</p>
+</blockquote>
+<h2 id="6-as-op-menusmodpanelyml">6. Панель модератора: <code>as: op</code> + анимации — <code>menus/modpanel.yml</code><a class="headerlink" href="#6-as-op-menusmodpanelyml" title="Permanent link">&para;</a></h2>
+<p>Меню закрыто правом, раскрывается спиралью, кнопки мигают кадрами, а команды выполняются <strong>от имени
+модератора с правами оператора</strong>. Полное описание — <a href="../Actions/">Actions</a> → <code>as: op</code> и
+<a href="../Animations/">Анимации</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;8»</span><span class="nv"> </span><span class="s">&amp;cПанель</span><span class="nv"> </span><span class="s">модератора&quot;</span>
+<span class="nt">rows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">modpanel</span><span class="p p-Indicator">]</span>
+<span class="nt">command-description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Панель</span><span class="nv"> </span><span class="s">модератора&quot;</span>
+<span class="nt">show-in-help</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="c1"># С 1.9.0 это право гейтит ВСЕ входы: команду, /am open, open_menu из другого меню и Java-API.</span>
+<span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alexmenus.menu.mod</span>
+
+<span class="nt">open-animation</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spiral</span>
+<span class="w">  </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">150</span><span class="w">                 </span><span class="c1"># 1 тик между шагами + 3 шага за тик</span>
+<span class="w">  </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:ui.button.click&quot;</span>
+
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Мигающая красная кнопка: кадр 2 меняет ТОЛЬКО материал, остальное наследуется.</span>
+<span class="w">  </span><span class="s">&#39;11&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REDSTONE_BLOCK</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cВключить</span><span class="nv"> </span><span class="s">режим</span><span class="nv"> </span><span class="s">ЧС&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Выполнится</span><span class="nv"> </span><span class="s">с</span><span class="nv"> </span><span class="s">правами</span><span class="nv"> </span><span class="s">оператора.&quot;</span>
+<span class="w">    </span><span class="nt">hide-all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">animation</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">      </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pingpong</span>
+<span class="w">      </span><span class="nt">frames</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w">                          </span><span class="c1"># базовый предмет</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NETHERRACK</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Команда фиксирована, подстановок нет — предупреждений в логе тоже не будет.</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">op</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;whitelist</span><span class="nv"> </span><span class="s">on&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cРежим</span><span class="nv"> </span><span class="s">ЧС</span><span class="nv"> </span><span class="s">включён.&quot;</span>
+
+<span class="w">  </span><span class="c1"># Пример с подстановкой в АРГУМЕНТАХ: разрешено, но при загрузке будет предупреждение в лог.</span>
+<span class="w">  </span><span class="s">&#39;13&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PAPER</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;eВыдать</span><span class="nv"> </span><span class="s">себе</span><span class="nv"> </span><span class="s">набор&quot;</span>
+<span class="w">    </span><span class="nt">animation</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">      </span><span class="nt">frames</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;eВыдать</span><span class="nv"> </span><span class="s">себе</span><span class="nv"> </span><span class="s">набор&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;6Выдать</span><span class="nv"> </span><span class="s">себе</span><span class="nv"> </span><span class="s">набор&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Имя команды — give, подстановка только в аргументе. Разрешено; в логе будет предупреждение.</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">op</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;give</span><span class="nv"> </span><span class="s">%player_name%</span><span class="nv"> </span><span class="s">golden_apple</span><span class="nv"> </span><span class="s">4&quot;</span>
+
+<span class="w">  </span><span class="s">&#39;15&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CLOCK</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;aTPS:</span><span class="nv"> </span><span class="s">&amp;f%server_tps_1%&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;7Онлайн:</span><span class="nv"> </span><span class="s">&amp;f%server_online%&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">refresh</span>
+
+<span class="w">  </span><span class="s">&#39;22&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BARRIER</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cЗакрыть&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close</span>
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Так писать НЕЛЬЗЯ</p>
+<p><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">  </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">op</span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{args}&quot;</span><span class="w">            </span><span class="c1"># ОТКЛОНЕНО при загрузке</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">  </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">op</span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:{args}&quot;</span><span class="w">  </span><span class="c1"># ОТКЛОНЕНО тоже — проверяется весь первый токен</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">  </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">console</span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;%papi_cmd%</span><span class="nv"> </span><span class="s">arg&quot;</span><span class="w">    </span><span class="c1"># ОТКЛОНЕНО с 1.9.0 (консоль сильнее оператора)</span>
+</code></pre></div>
+Игрок сам выбирал бы <strong>команду</strong>, которая выполнится с правами оператора. Плагин отключает такое
+действие при загрузке и пишет ошибку в лог с указанием меню и слота.</p>
+</div>
+<p>Дальше: <a href="../Input-Slots/">Input-Slots</a> — полный пример кузницы; <a href="../Animations/">Анимации</a> — кадры и узоры
+раскрытия; <a href="../Requirements/">Requirements</a> — все типы условий; <a href="../Actions/">Actions</a> — все действия;
+<a href="../Web-Editor/">Web-Editor</a> — собрать такое мышкой.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

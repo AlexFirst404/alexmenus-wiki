@@ -1,0 +1,2069 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документация плагина AlexMenus — движок меню для Paper 1.21.11">
+      
+      
+      
+        <link rel="canonical" href="https://alexfirst404.github.io/alexmenus-wiki/Actions/">
+      
+      
+        <link rel="prev" href="../Requirements/">
+      
+      
+        <link rel="next" href="../Advanced-Menu-Options/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Действия - AlexMenus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/pixel.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#actions" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href=".." title="AlexMenus" class="md-header__button md-logo" aria-label="AlexMenus" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlexMenus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Действия
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AlexFirst404/alexmenus-editor" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlexFirst404/alexmenus-editor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AlexMenus" class="md-nav__button md-logo" aria-label="AlexMenus" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    AlexMenus
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AlexFirst404/alexmenus-editor" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlexFirst404/alexmenus-editor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Начало работы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Настройки (config.yml)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Menu-Types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Типы меню
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Items-and-Clicks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Предметы и клики
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Input-Slots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-слоты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Анимации
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Условия (requirements)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модификаторы на ЛЮБОМ действии
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Оплата обрывает цепочку
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Справочник действий
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Справочник действий">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run_command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        run_command
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="run_command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-op" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        as: op — команда от имени игрока, но с правами оператора
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        broadcast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actionbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        actionbar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open_menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open_menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        back
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#close" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        close
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sound
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-server-bungeevelocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        connect (алиас server) — прокси Bungee/Velocity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_item
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_money-take_money-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_money / take_money — нужен Vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_exp-take_exp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_exp / take_exp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#take_item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        take_item — плата предметом
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        outcome — ровно один исход из нескольких
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Действия по input-слотам
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Действия по input-слотам">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modify_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        modify_slot — править предмет игрока на месте
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_slot — положить в слот новый предмет
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clear_slot — стереть содержимое
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_slot — отдать содержимое игроку
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_permission-take_permission-vault-luckperms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_permission / take_permission — нужен Vault или LuckPerms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        conditional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Разворачивание текста
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Advanced-Menu-Options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширенные опции меню
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Placeholders-and-Integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Плейсхолдеры и интеграции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commands-and-Permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Команды и права
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web-Editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Веб-редактор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Примеры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модификаторы на ЛЮБОМ действии
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Оплата обрывает цепочку
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Справочник действий
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Справочник действий">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run_command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        run_command
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="run_command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-op" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        as: op — команда от имени игрока, но с правами оператора
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        broadcast
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        title
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actionbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        actionbar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open_menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open_menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        back
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#close" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        close
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sound
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-server-bungeevelocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        connect (алиас server) — прокси Bungee/Velocity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_item
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_money-take_money-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_money / take_money — нужен Vault
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_exp-take_exp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_exp / take_exp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#take_item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        take_item — плата предметом
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        outcome — ровно один исход из нескольких
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Действия по input-слотам
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Действия по input-слотам">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modify_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        modify_slot — править предмет игрока на месте
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_slot — положить в слот новый предмет
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clear_slot — стереть содержимое
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_slot — отдать содержимое игроку
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#give_permission-take_permission-vault-luckperms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        give_permission / take_permission — нужен Vault или LuckPerms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        conditional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Разворачивание текста
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="actions">Действия (actions)<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h1>
+<p>Действие — YAML-карта с полем <code>type</code> и параметрами. Действия задаются списком: в <code>clicks.&lt;тип&gt;</code>, в
+<code>deny</code>/<code>success</code> требований (см. <a href="../Requirements/">Requirements</a>) и в ветках <code>then</code>/<code>else</code> действия
+<code>conditional</code>. Выполняются по порядку.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Привет!&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sound</span>
+<span class="w">      </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:ui.button.click&quot;</span>
+</code></pre></div>
+<h2 id="_1">Модификаторы на ЛЮБОМ действии<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Модификатор</th>
+<th>Значение</th>
+<th>Поведение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chance</code></td>
+<td><code>0–100</code>, <strong>дробные разрешены</strong></td>
+<td>Шанс выполнения в процентах. <code>100</code>/нет = всегда; <code>0</code> = никогда; <code>12.5</code> = 12.5 %. Применяется, только если ключ <code>chance</code> присутствует.</td>
+</tr>
+<tr>
+<td><code>delay</code></td>
+<td>тики</td>
+<td>Отложить действие на N тиков (20 тиков = 1 сек). Через <code>delay</code> тиков проверяется, что игрок ещё онлайн. <code>0</code>/нет = сразу.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span>
+<span class="w">  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DIAMOND</span>
+<span class="w">  </span><span class="nt">chance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span><span class="w">        </span><span class="c1"># выпадет примерно в 25% кликов</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;Редкая</span><span class="nv"> </span><span class="s">реплика&quot;</span>
+<span class="w">  </span><span class="nt">chance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12.5</span><span class="w">      </span><span class="c1"># дробные проценты работают</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;...сообщение</span><span class="nv"> </span><span class="s">через</span><span class="nv"> </span><span class="s">секунду&quot;</span>
+<span class="w">  </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w">         </span><span class="c1"># покажется через 20 тиков</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Дробный <code>chance</code> теперь считается по-настоящему</p>
+<p>Раньше значение читалось целым числом, и <code>chance: 12.5</code> молча округлялось в ноль — то есть действие
+срабатывало <strong>всегда</strong>. Теперь это честные 12.5 %.</p>
+</div>
+<p>Битое значение (<code>chance:</code> без числа, <code>chance: часто</code>) — <strong>fail-open</strong>: действие выполняется каждый раз, но
+плагин один раз ругается в лог. Опечатка не должна тихо ломать выдачу на живом сервере, но и незамеченной
+остаться не должна.</p>
+<h2 id="_2">Оплата обрывает цепочку<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Действия-списания — <code>take_item</code>, <code>take_money</code>, <code>take_exp</code> — работают как <strong>гейт</strong>, а не как пожелание.
+Если списать не удалось (не хватило, нет Vault, битый <code>amount:</code>), <strong>всё, что стоит после них в списке, не
+выполняется</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_money</span>
+<span class="w">      </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span><span class="w">      </span><span class="c1"># не выдастся, если денег не хватило</span>
+<span class="w">      </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DIAMOND</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span><span class="w">        </span><span class="c1"># и это тоже не покажется</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;aКуплено!&quot;</span>
+</code></pre></div>
+<p>Ровно то же правило действует внутри <code>conditional</code> (<code>then</code>/<code>else</code>) и <code>outcome</code>: провалившееся списание во
+вложенной ветке обрывает и внешний список — гейт нельзя обойти вложением.</p>
+<div class="admonition warning">
+<p class="admonition-title"><code>delay</code> у списания — это дыра</p>
+<p>Отложенное списание физически не может остановить то, что выполнилось раньше него. Плагин ругается в
+лог, если у <code>take_*</code> стоит <code>delay:</code>. Либо убери задержку, либо положи награду в ту же отложенную ветку.</p>
+</div>
+<h2 id="_3">Справочник действий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="run_command"><code>run_command</code><a class="headerlink" href="#run_command" title="Permanent link">&para;</a></h3>
+<p>Выполнить команду. <code>command</code> — сам текст (лидирующий <code>/</code> можно опустить). Текст разворачивает
+<code>{аргументы}</code> меню и плейсхолдеры (<code>%...%</code>).</p>
+<table>
+<thead>
+<tr>
+<th><code>as:</code></th>
+<th>Кто выполняет</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>player</code> (по умолчанию)</td>
+<td>Сам игрок, со своими правами.</td>
+</tr>
+<tr>
+<td><code>console</code></td>
+<td>Консоль сервера.</td>
+</tr>
+<tr>
+<td><code>op</code> (синоним <code>operator</code>)</td>
+<td>Сам игрок, но <strong>с правами оператора</strong> на время вызова — см. ниже.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">  </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">console</span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;give</span><span class="nv"> </span><span class="s">%player_name%</span><span class="nv"> </span><span class="s">diamond</span><span class="nv"> </span><span class="s">1&quot;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">  </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">player</span><span class="w">            </span><span class="c1"># по умолчанию — от имени игрока</span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;spawn&quot;</span>
+</code></pre></div>
+<p>Неизвестное значение <code>as:</code> (<code>as: администратор</code>) — это <code>player</code>, плюс предупреждение в лог: fail-closed,
+чтобы опечатка не выдавала лишних прав.</p>
+<h4 id="as-op"><code>as: op</code> — команда от имени игрока, но с правами оператора<a class="headerlink" href="#as-op" title="Permanent link">&para;</a></h4>
+<p>Нужно, когда команду обязан выполнить <strong>сам игрок</strong> (плагин смотрит на исполнителя, а не на отправителя),
+но права на неё у игрока нет. Точка входа та же, что у <code>as: player</code> — меняются только права на время вызова.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;13&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENDER_PEARL</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;dВарп</span><span class="nv"> </span><span class="s">на</span><span class="nv"> </span><span class="s">спавн&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">op</span><span class="w">           </span><span class="c1"># синоним: operator</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;warp</span><span class="nv"> </span><span class="s">spawn&quot;</span>
+</code></pre></div>
+<p><strong>Отдельного права на <code>as: op</code> нет.</strong> Кто может нажать такую кнопку — решают обычные
+<a href="../Commands-and-Permissions/"><code>permission:</code> меню</a> и <a href="../Requirements/"><code>click-requirement</code></a>. Ставь их.</p>
+<div class="admonition danger">
+<p class="admonition-title">Оп в Minecraft не бывает временным — читай, как это устроено</p>
+<p><code>setOp(true)</code> <strong>немедленно пишет игрока в <code>ops.json</code></strong> (проверено по байткоду Paper:
+<code>CraftPlayer.setOp</code> → <code>PlayerList.op</code> → <code>ServerOpList.add</code> → <code>StoredUserList.save</code>). Это не флаг в
+памяти: он переживает перезапуск. Если сервер упадёт между выдачей и снятием, игрок останется
+оператором <strong>навсегда</strong>, и никто об этом не узнает.</p>
+<p>Как плагин с этим борется:</p>
+<ol>
+<li><strong>Отметка на диске до выдачи.</strong> Перед <code>setOp(true)</code> в <code>plugins/AlexMenus/temp-op/&lt;uuid&gt;.op</code>
+   атомарно пишется отметка (с <code>fsync</code>). <strong>Не удалось записать — оп не выдаётся и команда не
+   выполняется вообще</strong> (fail-closed): временный оп без следа на диске и есть тот самый застрявший оп.</li>
+<li><strong>Снятие в <code>finally</code>.</strong> Оп снимается и при исключении внутри команды, и когда команда просто не
+   нашлась.</li>
+<li><strong>Уборка на старте.</strong> На <code>onEnable</code> плагин снимает оп со всех, чьи отметки остались на диске (а это
+   и есть след краша), громко пишет об этом в лог (<code>!!! as: op: ЗАСТРЯВШИЙ ОПЕРАТОР — …</code>) и удаляет
+   отметки.</li>
+<li><strong>Снятие при выключении плагина.</strong> На <code>onDisable</code> оп снимается со всех, кто в этот момент внутри
+   временного опа. Случай реальный: команда под опом вполне может быть <code>/stop</code> или перезагрузкой
+   плагина — тогда выключение происходит <strong>внутри</strong> <code>try</code>, до <code>finally</code>.</li>
+<li><strong>Уже-оператора не трогаем.</strong> Если игрок и так оп — плагин ничего не выдаёт и, что важнее, ничего
+   не снимает: иначе клик по кнопке разжаловал бы админа.</li>
+</ol>
+<p>Что остаётся на вашей ответственности: пока команда выполняется, игрок <strong>реально оператор</strong>, и в
+<code>ops.json</code> есть запись. Если команда под опом что-то запускает асинхронно или откладывает — эта часть
+выполнится <strong>уже без опа</strong>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Имя команды нельзя собирать из подстановки — запрещено при загрузке</p>
+<p><code>command: '{args}'</code> означало бы «игрок сам выбирает <strong>команду</strong>, которая выполнится с правами
+оператора». Это не «дыра», это раздача опа всем желающим. Такое действие <strong>отключается при загрузке
+меню</strong>: в лог уходит ошибка с указанием меню и слота, и команда не выполнится никогда.</p>
+<p>Проверяется <strong>весь первый токен</strong>, а не первый символ, потому что Bukkit регистрирует каждую команду и
+как <code>label</code>, и как <code>fallbackPrefix:label</code>. Поэтому отклоняются все эти записи:</p>
+<div class="highlight"><pre><span></span><code>command: &quot;{args}&quot;                → отклонено
+command: &quot;/{args}&quot;               → отклонено (ведущий / и пробелы срезаются)
+command: &quot;minecraft:{args}&quot;      → отклонено (начинается с буквы, но команда всё равно любая)
+command: &quot;essentials:{args}&quot;     → отклонено
+command: &quot;lp{args}&quot;              → отклонено
+command: &quot;%some_placeholder% x&quot;  → отклонено (% — тоже подстановка)
+</code></pre></div>
+<p>Ровно на этом ломалась первая версия проверки: <code>/shop op Ник</code> превращалось в <code>minecraft:op Ник</code> и
+выдавало игроку <strong>постоянный</strong> оп.</p>
+<p><strong>Подстановка в аргументах разрешена</strong> — команда фиксирована, игрок влияет только на её хвост:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># меню объявляет args: [target], команду открывают как /modpanel &lt;ник&gt;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">  </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">op</span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;give</span><span class="nv"> </span><span class="s">{target}</span><span class="nv"> </span><span class="s">golden_apple</span><span class="nv"> </span><span class="s">4&quot;</span><span class="w">   </span><span class="c1"># первый токен — give, подстановка в аргументе</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">  </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">op</span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;give</span><span class="nv"> </span><span class="s">%player_name%</span><span class="nv"> </span><span class="s">golden_apple</span><span class="nv"> </span><span class="s">4&quot;</span><span class="w">   </span><span class="c1"># то же самое через PlaceholderAPI</span>
+</code></pre></div>
+<p>Оба варианта <strong>разрешены</strong>, но при загрузке о них пишется предупреждение с указанием меню и слота —
+приём законный и часто именно так и задуман, но админ должен видеть, где он это допустил. Проверь, что
+подставляемым значением нельзя добиться лишнего. Сами значения очищаются от переводов строк и
+управляющих символов, чтобы одно значение не превратилось в несколько команд.</p>
+<p>Напоминание: <code>{target}</code> работает только если меню объявило <code>target</code> в
+<a href="../Advanced-Menu-Options/"><code>args:</code></a> (или это ключ input-слота) — иначе подстановка останется в строке
+как есть. Всегда доступны <code>{arg1}</code>, <code>{arg2}</code>, … и <code>{args}</code>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">ТОТ ЖЕ запрет применён к <code>as: console</code> — ломающее изменение</p>
+<p>Консоль <strong>сильнее</strong> оператора, поэтому гейт только на <code>op</code> обходился бы заменой одного слова в
+конфиге. С 1.9.0 <code>run_command ... as: console</code>, у которого имя команды собирается из подстановки,
+<strong>тоже отключается при загрузке</strong> — с ошибкой в логе (<code>ОТКЛЮЧЕНО, console</code>).</p>
+<p>Если у тебя было меню с <code>as: console</code> и <code>command: '{args}'</code> (или <code>'%papi%…'</code>, <code>'minecraft:{args}'</code>) —
+<strong>эта кнопка перестанет работать</strong>. Дыра существовала и до появления <code>as: op</code>; чинить её отдельно от
+гейта было бессмысленно. Впиши конкретную команду, а подстановку оставь в аргументах.</p>
+</div>
+<p><strong>Видимость.</strong> После каждой загрузки меню (и каждого <code>/am reload</code>) в лог уходит сводка — админ обязан всегда
+знать, где у него раздаётся оп:</p>
+<div class="highlight"><pre><span></span><code>[AlexMenus] as: op используется в 2 местах: shop → слот 13 → clicks.left[0], admin → слот 4 → clicks.any[0].
+            Кто может нажать на такую кнопку — решают обычные permission меню и click-requirement;
+            отдельного права на `as: op` нет.
+</code></pre></div>
+<p>Проверка ходит и по <strong>вложенным</strong> ветвям — <code>conditional.then</code>/<code>else</code>, <code>outcome.outcomes[].actions</code>,
+<code>deny</code>/<code>success</code> требований, хуки input-слотов (<code>on-insert</code>/<code>on-extract</code>/<code>on-reject</code>): их плагин разбирает
+уже во время клика, и без обхода внутри них можно было бы спрятать что угодно.</p>
+<h3 id="message"><code>message</code><a class="headerlink" href="#message" title="Permanent link">&para;</a></h3>
+<p>Отправить сообщение игроку. Поле <code>text</code> (цвета + плейсхолдеры).</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Ты</span><span class="nv"> </span><span class="s">нажал</span><span class="nv"> </span><span class="s">кнопку,</span><span class="nv"> </span><span class="s">%player_name%!&quot;</span>
+</code></pre></div>
+<h3 id="broadcast"><code>broadcast</code><a class="headerlink" href="#broadcast" title="Permanent link">&para;</a></h3>
+<p>Сообщение <strong>всему серверу</strong>. Поле <code>text</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">broadcast</span>
+<span class="w">  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;%player_name%</span><span class="nv"> </span><span class="s">&lt;yellow&gt;купил</span><span class="nv"> </span><span class="s">награду!&quot;</span>
+</code></pre></div>
+<h3 id="title"><code>title</code><a class="headerlink" href="#title" title="Permanent link">&para;</a></h3>
+<p>Показать <strong>титул</strong> (большой текст по центру) + подзаголовок с таймингами появления/показа/исчезновения.
+Тайминги — в <strong>тиках</strong> (20 тиков = 1 сек). Все поля опциональны.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>По умолчанию</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td><code>""</code></td>
+<td>Основной текст (цвета/плейсхолдеры/<code>{аргументы}</code>).</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td><code>""</code></td>
+<td>Подзаголовок.</td>
+</tr>
+<tr>
+<td><code>fade-in</code></td>
+<td><code>10</code></td>
+<td>Тики появления.</td>
+</tr>
+<tr>
+<td><code>stay</code></td>
+<td><code>40</code></td>
+<td>Тики показа.</td>
+</tr>
+<tr>
+<td><code>fade-out</code></td>
+<td><code>10</code></td>
+<td>Тики исчезновения.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">title</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gradient:#ffd700:#ff8800&gt;Добро</span><span class="nv"> </span><span class="s">пожаловать!&quot;</span>
+<span class="w">  </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;%player_name%&quot;</span>
+<span class="w">  </span><span class="nt">fade-in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">stay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">  </span><span class="nt">fade-out</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+</code></pre></div>
+<h3 id="actionbar"><code>actionbar</code><a class="headerlink" href="#actionbar" title="Permanent link">&para;</a></h3>
+<p>Сообщение в <strong>action bar</strong> (узкая строка над хотбаром). Поле <code>text</code> (цвета/плейсхолдеры/<code>{аргументы}</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actionbar</span>
+<span class="w">  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Баланс:</span><span class="nv"> </span><span class="s">&lt;white&gt;%vault_eco_balance%&quot;</span>
+</code></pre></div>
+<h3 id="open_menu"><code>open_menu</code><a class="headerlink" href="#open_menu" title="Permanent link">&para;</a></h3>
+<p>Открыть другое меню (переход, кладётся в историю навигации). Поле <code>menu</code> — id меню.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">open_menu</span>
+<span class="w">  </span><span class="nt">menu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shop</span>
+</code></pre></div>
+<h3 id="back"><code>back</code><a class="headerlink" href="#back" title="Permanent link">&para;</a></h3>
+<p>Вернуться к предыдущему меню в истории. Если истории нет — закрывает окно.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">back</span>
+</code></pre></div>
+<h3 id="refresh"><code>refresh</code><a class="headerlink" href="#refresh" title="Permanent link">&para;</a></h3>
+<p>Перерисовать текущее меню на месте (пере-вычисляет плейсхолдеры/видимость).</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">refresh</span>
+</code></pre></div>
+<h3 id="close"><code>close</code><a class="headerlink" href="#close" title="Permanent link">&para;</a></h3>
+<p>Закрыть меню и очистить историю навигации.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">close</span>
+</code></pre></div>
+<h3 id="sound"><code>sound</code><a class="headerlink" href="#sound" title="Permanent link">&para;</a></h3>
+<p>Проиграть звук игроку. Поле <code>sound</code> — ключ звука (<code>namespace:path</code>). Громкость/высота фиксированы (1.0),
+источник <code>MASTER</code>. Битый ключ звука логируется, но не крашит.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sound</span>
+<span class="w">  </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:entity.experience_orb.pickup&quot;</span>
+</code></pre></div>
+<blockquote>
+<p>Дополнительных полей громкости/высоты нет — читается только <code>sound</code>.</p>
+</blockquote>
+<h3 id="connect-server-bungeevelocity"><code>connect</code> (алиас <code>server</code>) — прокси Bungee/Velocity<a class="headerlink" href="#connect-server-bungeevelocity" title="Permanent link">&para;</a></h3>
+<p>Отправить игрока на <strong>другой сервер</strong> сети через плагин-канал <code>BungeeCord</code> (его понимают и BungeeCord, и
+Velocity). Поле <code>server</code> — имя сервера в конфиге прокси. Разворачивает плейсхолдеры/<code>{аргументы}</code>. Пустое имя
+— no-op.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connect</span>
+<span class="w">  </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lobby</span>
+<span class="c1"># алиас `server` — то же самое:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">server</span>
+<span class="w">  </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">survival</span>
+</code></pre></div>
+<blockquote>
+<p>Требуется прокси (BungeeCord/Velocity/Waterfall) с настроенными серверами; на одиночном сервере действие
+ничего не делает. Имя сервера — как в конфиге прокси, не адрес.</p>
+</blockquote>
+<h3 id="give_item"><code>give_item</code><a class="headerlink" href="#give_item" title="Permanent link">&para;</a></h3>
+<p>Выдать предмет в инвентарь. Поля как у предмета меню + <code>amount</code> и <code>menu</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>material</code></td>
+<td>Материал (не-предмет/неизвестный → <code>STONE</code>).</td>
+</tr>
+<tr>
+<td><code>cmd</code></td>
+<td>Строковый custom-model-data.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Имя.</td>
+</tr>
+<tr>
+<td><code>lore</code></td>
+<td>Лор (список).</td>
+</tr>
+<tr>
+<td><code>flags</code> / <code>hide-all</code></td>
+<td>Скрыть item-flags (<code>hide-all: true</code> — все).</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>Количество (минимум 1). Больше стака — режется на нормальные стаки; абсурдные значения обрезаются с предупреждением.</td>
+</tr>
+<tr>
+<td><code>menu</code></td>
+<td>Если задано — на предмет вешается PDC-тег меню: <strong>ПКМ этим предметом открывает меню</strong> <code>menu</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Что не влезло в инвентарь — <strong>падает под ноги</strong> игроку, а не пропадает.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># обычная выдача</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span>
+<span class="w">  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOLDEN_APPLE</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="c1"># «предмет-открывашка» меню (ПКМ → открыть меню main)</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_item</span>
+<span class="w">  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NETHER_STAR</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Меню</span><span class="nv"> </span><span class="s">сервера&quot;</span>
+<span class="w">  </span><span class="nt">hide-all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">menu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+</code></pre></div>
+<h3 id="give_money-take_money-vault"><code>give_money</code> / <code>take_money</code> — нужен Vault<a class="headerlink" href="#give_money-take_money-vault" title="Permanent link">&para;</a></h3>
+<p>Выдать/снять деньги. Поле <code>amount</code> (парсится в число, минимум 0).</p>
+<ul>
+<li><code>give_money</code> — награда: не удалось выплатить (нет Vault/экономики) → предупреждение в лог, цепочка идёт
+  дальше.</li>
+<li><code>take_money</code> — <strong>оплата</strong>: не удалось списать → срабатывает звук <code>sounds.deny</code> и <strong>вся оставшаяся цепочка
+  отменяется</strong>. Это касается и случая, когда Vault <strong>не установлен</strong>: раньше товар при этом выдавался
+  бесплатно, теперь — не выдаётся вообще.</li>
+<li>Не-число в <code>amount</code> у <code>take_money</code> — тоже отказ (молчаливый ноль означал бы «бесплатно»).</li>
+<li><code>take_money</code> c <code>amount: 0</code> — законный no-op, цепочку не трогает.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_money</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_money</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+</code></pre></div>
+<h3 id="give_exp-take_exp"><code>give_exp</code> / <code>take_exp</code><a class="headerlink" href="#give_exp-take_exp" title="Permanent link">&para;</a></h3>
+<p>Выдать/снять опыт. Поля <code>amount</code> (минимум 0) и <code>level: true|false</code>.</p>
+<ul>
+<li><code>level: true</code> — работает с <strong>уровнями</strong>.</li>
+<li><code>level: false</code>/нет — работает с <strong>очками</strong> опыта (считается истинный суммарный опыт, а не ванильный
+  счётчик — тот же источник, что у требования <code>exp</code>).</li>
+<li><code>take_exp</code> — <strong>оплата</strong> по принципу «всё или ничего»: не хватило — не снято ничего и цепочка обрывается
+  (раньше уровень просто прижимался к нулю, а награда всё равно выдавалась).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_exp</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">  </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">          </span><span class="c1"># +5 уровней</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_exp</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w">          </span><span class="c1"># −100 очков опыта</span>
+</code></pre></div>
+<h3 id="take_item"><code>take_item</code> — плата предметом<a class="headerlink" href="#take_item" title="Permanent link">&para;</a></h3>
+<p>Списать предметы из инвентаря игрока. Поле <code>amount</code> — сколько взять (по умолчанию <code>1</code>), остальные поля —
+<strong>фильтр предмета</strong> (тот же словарь, что у <code>input.accept</code> и требования <code>has_item</code>, см.
+<a href="../Input-Slots/">Input-Slots</a>).</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>amount</code></td>
+<td>Сколько предметов списать (минимум 1).</td>
+</tr>
+<tr>
+<td><code>material</code></td>
+<td>Материал: строка или список.</td>
+</tr>
+<tr>
+<td><code>name-equals</code> / <code>name-contains</code></td>
+<td>Имя целиком (регистр важен) / подстрока имени (регистр не важен).</td>
+</tr>
+<tr>
+<td><code>lore-contains</code></td>
+<td>Строка или список подстрок лора.</td>
+</tr>
+<tr>
+<td><code>cmd</code></td>
+<td>custom-model-data.</td>
+</tr>
+<tr>
+<td><code>tag</code></td>
+<td>PDC-ключ <code>namespace:key</code> (проверяется наличие).</td>
+</tr>
+<tr>
+<td><code>min-amount</code></td>
+<td>Минимальный размер стека, который вообще считается подходящим.</td>
+</tr>
+<tr>
+<td><code>enchants</code></td>
+<td>Минимальные уровни зачарований.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="c1"># обычный слиток</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_item</span>
+<span class="w">  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOLD_INGOT</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># именной «Кузнечный слиток» — обычным за него не заплатишь</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_item</span>
+<span class="w">  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOLD_INGOT</span>
+<span class="w">  </span><span class="nt">name-contains</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Кузнечный&quot;</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+<p>Правила:</p>
+<ul>
+<li><strong>Всё или ничего</strong>: не хватило — не снято ничего, цепочка обрывается (наполовину оплаченной покупки не
+  бывает).</li>
+<li>Смотрит <strong>только 36 основных слотов</strong> (хотбар + основной инвентарь). Броня и офф-хенд не трогаются
+  никогда — списывать плату из надетой брони значило бы молча раздевать игрока.</li>
+<li><strong>Фильтр без единого поля</strong> (<code>- type: take_item</code> и всё) — действие пропускается <strong>вместе со всем, что
+  после него</strong>: пустой фильтр совпал бы с каждым предметом инвентаря.</li>
+</ul>
+<h3 id="outcome"><code>outcome</code> — ровно один исход из нескольких<a class="headerlink" href="#outcome" title="Permanent link">&para;</a></h3>
+<p>Выбрать и выполнить <strong>ровно одну</strong> ветку из <code>outcomes:</code> по весу <code>weight</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outcome</span>
+<span class="w">  </span><span class="nt">outcomes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;aУспех!&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">35</span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;eНичего</span><span class="nv"> </span><span class="s">не</span><span class="nv"> </span><span class="s">вышло.&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">          </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cПровал!&quot;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>outcomes</code></td>
+<td>Список веток. Каждая ветка — карта с <code>weight:</code> и <code>actions:</code>.</td>
+</tr>
+<tr>
+<td><code>weight</code></td>
+<td>Вес ветки. Нет ключа = <code>1</code>. Отрицательный/нечисловой = <code>0</code> (в лог пишется предупреждение).</td>
+</tr>
+<tr>
+<td><code>actions</code></td>
+<td>Список действий ветки — любые действия, включая вложенные <code>outcome</code>/<code>conditional</code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Веса — это НЕ проценты</p>
+<p>Веса нормируются собственной суммой, поэтому <code>60/35/5</code> и <code>12/7/1</code> ведут себя <strong>одинаково</strong>. Благодаря
+этому добавление новой ветки не требует пересчитывать остальные.</p>
+</div>
+<p>Ветка выполняется так же, как <code>then</code>/<code>else</code> у <code>conditional</code>: её действия получают свои <code>chance</code>/<code>delay</code>, а
+провалившееся внутри неё списание обрывает и внешнюю цепочку. Если <code>outcomes:</code> пуст или все веса нулевые —
+не выполняется ничего (с предупреждением в лог).</p>
+<h3 id="input-">Действия по input-слотам<a class="headerlink" href="#input-" title="Permanent link">&para;</a></h3>
+<p>Работают со слотами, куда игрок кладёт свои вещи (<code>input:</code>, см. <a href="../Input-Slots/">Input-Slots</a>). У всех
+обязателен <code>slot:</code> — номер input-слота <strong>открытого сейчас</strong> меню; без него действие пропускается с
+предупреждением.</p>
+<h4 id="modify_slot"><code>modify_slot</code> — править предмет игрока на месте<a class="headerlink" href="#modify_slot" title="Permanent link">&para;</a></h4>
+<p>Основное действие для прокачки: меняет <strong>тот же</strong> предмет, поэтому старые зачарования, прочность и чужой
+NBT сохраняются — трогаются только перечисленные ключи.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot</code></td>
+<td>Номер input-слота (обязателен).</td>
+</tr>
+<tr>
+<td><code>set-material</code></td>
+<td>Сменить материал, перенеся на него существующую мету (железный меч → алмазный с теми же чарами).</td>
+</tr>
+<tr>
+<td><code>set-name</code></td>
+<td>Новое имя. <strong>Пустая строка</strong> снимает кастомное имя и возвращает ванильное.</td>
+</tr>
+<tr>
+<td><code>set-lore</code></td>
+<td>Заменить лор целиком (строка или список).</td>
+</tr>
+<tr>
+<td><code>add-lore</code></td>
+<td>Дописать строки в конец лора.</td>
+</tr>
+<tr>
+<td><code>add-enchant</code></td>
+<td>Карта <code>зачарование: уровень</code>. Ограничения уровня <strong>игнорируются</strong> (кузница на то и кузница). Уровень <code>0</code> или меньше — снять зачарование.</td>
+</tr>
+<tr>
+<td><code>remove-enchant</code></td>
+<td>Имя или список имён зачарований на снятие.</td>
+</tr>
+<tr>
+<td><code>set-amount</code></td>
+<td>Установить количество.</td>
+</tr>
+<tr>
+<td><code>add-amount</code></td>
+<td>Прибавить к количеству (отрицательное — убавить). Ноль и меньше — <strong>слот пустеет</strong>.</td>
+</tr>
+<tr>
+<td><code>set-cmd</code></td>
+<td>Строковый custom-model-data. Пусто — очистить (в том числе легаси-число).</td>
+</tr>
+<tr>
+<td><code>damage</code></td>
+<td><strong>Плюс изнашивает, минус чинит.</strong> Обрезается по прочности предмета. У предметов без прочности игнорируется.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modify_slot</span>
+<span class="w">  </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="w">  </span><span class="nt">add-enchant</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sharpness</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="w">    </span><span class="nt">unbreaking</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">set-name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;6Клинок</span><span class="nv"> </span><span class="s">кузницы&quot;</span>
+<span class="w">  </span><span class="nt">add-lore</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&amp;8Закалён</span><span class="nv"> </span><span class="s">в</span><span class="nv"> </span><span class="s">кузнице&quot;</span>
+<span class="w">  </span><span class="nt">damage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-200</span><span class="w">          </span><span class="c1"># починить на 200 единиц прочности</span>
+</code></pre></div>
+<h4 id="set_slot"><code>set_slot</code> — положить в слот новый предмет<a class="headerlink" href="#set_slot" title="Permanent link">&para;</a></h4>
+<p>Полностью заменяет содержимое слота свежесобранным предметом. Поля как у <code>give_item</code>: <code>material</code>
+(обязателен), <code>name</code>, <code>lore</code>, <code>cmd</code>, <code>amount</code>, <code>flags</code>/<code>hide-all</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">set_slot</span>
+<span class="w">  </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="w">  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NETHERITE_INGOT</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;fСплав</span><span class="nv"> </span><span class="s">кузницы&quot;</span>
+<span class="w">  </span><span class="nt">amount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+<h4 id="clear_slot"><code>clear_slot</code> — стереть содержимое<a class="headerlink" href="#clear_slot" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clear_slot</span>
+<span class="w">  </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+</code></pre></div>
+<p>Предмет исчезает <strong>законно</strong> — это цена риска, а не потеря. Мягкие альтернативы провала: <code>modify_slot</code> с
+<code>damage: 300</code> (износ), <code>add-amount: -1</code> (убавить) или <code>add-enchant: { sharpness: 0 }</code> (снять чары).</p>
+<h4 id="give_slot"><code>give_slot</code> — отдать содержимое игроку<a class="headerlink" href="#give_slot" title="Permanent link">&para;</a></h4>
+<p>Кладёт содержимое слота в инвентарь и опустошает слот. Что не влезло — падает под ноги.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_slot</span>
+<span class="w">  </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+</code></pre></div>
+<h3 id="give_permission-take_permission-vault-luckperms"><code>give_permission</code> / <code>take_permission</code> — нужен Vault или LuckPerms<a class="headerlink" href="#give_permission-take_permission-vault-luckperms" title="Permanent link">&para;</a></h3>
+<p>Выдать/снять пермишен-нод игроку. Поле <code>permission</code> — сам нод (разворачивает плейсхолдеры/<code>{аргументы}</code>).
+Мутация идёт через мягкий пермишен-хук (<strong>Vault</strong> с провайдером прав или <strong>LuckPerms</strong> напрямую).</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">give_permission</span>
+<span class="w">  </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alexmenus.menu.vip</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">take_permission</span>
+<span class="w">  </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">essentials.fly</span>
+</code></pre></div>
+<blockquote>
+<p>Если ни Vault-провайдера прав, ни LuckPerms нет — действие пропускается с предупреждением в лог (нод не
+меняется, краша нет). Пустой <code>permission</code> — no-op. Изменения применяются к онлайн-игроку, который кликнул.</p>
+</blockquote>
+<h3 id="conditional"><code>conditional</code><a class="headerlink" href="#conditional" title="Permanent link">&para;</a></h3>
+<p>Ветвление по условию. Поле <code>requirement</code> (см. <a href="../Requirements/">Requirements</a>) → выполнить <code>then</code> при успехе,
+иначе <code>else</code>. Обе ветки — списки действий.</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conditional</span>
+<span class="w">  </span><span class="nt">requirement</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">permission</span>
+<span class="w">    </span><span class="nt">permission</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alexmenus.vip</span>
+<span class="w">  </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;aqua&gt;Ты</span><span class="nv"> </span><span class="s">VIP!&quot;</span>
+<span class="w">  </span><span class="nt">else</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
+<span class="w">      </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;Обычный</span><span class="nv"> </span><span class="s">игрок.&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">open_menu</span>
+<span class="w">      </span><span class="nt">menu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">buy_vip</span>
+</code></pre></div>
+<h2 id="_4">Разворачивание текста<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>В текстовых полях действий (<code>command</code>, <code>text</code>, <code>title</code>/<code>subtitle</code>, <code>server</code>, <code>permission</code>, а также
+<code>name</code>/<code>lore</code> у <code>set_slot</code> и <code>set-name</code>/<code>set-lore</code>/<code>add-lore</code> у <code>modify_slot</code>) сначала
+подставляются <code>{ключ}</code> — <a href="../Advanced-Menu-Options/">аргументы меню</a> (<code>args</code>: <code>{имя}</code>, <code>{argN}</code>, <code>{args}</code>), затем
+разворачиваются плейсхолдеры PlaceholderAPI (<code>%...%</code>), если он установлен. Если у меню нет <code>args</code> и токенов не
+передавали — подстановка <code>{...}</code> просто ничего не меняет. Подробнее —
+<a href="../Placeholders-and-Integrations/">Placeholders-and-Integrations</a>.</p>
+<blockquote>
+<p>Неизвестный <code>type</code> действия просто логируется предупреждением и пропускается.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

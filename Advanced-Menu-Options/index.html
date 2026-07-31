@@ -1,0 +1,1228 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документация плагина AlexMenus — движок меню для Paper 1.21.11">
+      
+      
+      
+        <link rel="canonical" href="https://alexfirst404.github.io/alexmenus-wiki/Advanced-Menu-Options/">
+      
+      
+        <link rel="prev" href="../Actions/">
+      
+      
+        <link rel="next" href="../Placeholders-and-Integrations/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Расширенные опции меню - AlexMenus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/pixel.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href=".." title="AlexMenus" class="md-header__button md-logo" aria-label="AlexMenus" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlexMenus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Расширенные опции меню
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AlexFirst404/alexmenus-editor" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlexFirst404/alexmenus-editor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AlexMenus" class="md-nav__button md-logo" aria-label="AlexMenus" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    AlexMenus
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AlexFirst404/alexmenus-editor" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlexFirst404/alexmenus-editor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Начало работы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Настройки (config.yml)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Menu-Types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Типы меню
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Items-and-Clicks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Предметы и клики
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Input-Slots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-слоты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Анимации
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Условия (requirements)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширенные опции меню
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширенные опции меню
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        update-interval — живое обновление плейсхолдеров
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        args — аргументы команды открытия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-item-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open-item — предмет-открывашка (хотбар)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open-animation — анимация открытия
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Placeholders-and-Integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Плейсхолдеры и интеграции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commands-and-Permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Команды и права
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web-Editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Веб-редактор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Примеры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        update-interval — живое обновление плейсхолдеров
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        args — аргументы команды открытия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-item-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open-item — предмет-открывашка (хотбар)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open-animation — анимация открытия
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">Продвинутые настройки меню<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Ключи верхнего уровня файла меню (<code>menus/*.yml</code>), помимо базовых из <a href="../Menu-Types/">Menu-Types</a>. Все —
+<strong>необязательны</strong>. Здесь: живое обновление плейсхолдеров (<code>update-interval</code>), аргументы команды (<code>args</code>),
+предмет-открывашка (<code>open-item</code>) и анимация открытия (<code>open-animation</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Ключ</th>
+<th>Тип</th>
+<th>Кратко</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>update-interval</code></td>
+<td>число (тики)</td>
+<td>Живая перерисовка открытого меню каждые N тиков. <code>0</code> = выкл.</td>
+</tr>
+<tr>
+<td><code>args</code></td>
+<td>список имён</td>
+<td>Захват аргументов команды открытия в <code>{имя}</code> / <code>{argN}</code> / <code>{args}</code>.</td>
+</tr>
+<tr>
+<td><code>open-item</code></td>
+<td>секция</td>
+<td>«Предмет-открывашка» в хотбаре (ПКМ открывает меню).</td>
+</tr>
+<tr>
+<td><code>open-animation</code></td>
+<td>секция</td>
+<td>Пошаговое появление предметов при открытии (только <code>chest</code>). Полностью — <a href="../Animations/">Анимации</a>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Кадровые анимации отдельных предметов (<code>items.&lt;slot&gt;.animation</code>) живут на своей странице —
+<a href="../Animations/">Анимации</a>.</p>
+</blockquote>
+<hr />
+<h2 id="update-interval"><code>update-interval</code> — живое обновление плейсхолдеров<a class="headerlink" href="#update-interval" title="Permanent link">&para;</a></h2>
+<p>Число <strong>тиков</strong> между перерисовками уже <strong>открытого</strong> меню. Плагин пере-вычисляет <code>title</code>, <code>name</code>, <code>lore</code>,
+видимость (<code>view-requirement</code>) <strong>на месте</strong>, не переоткрывая окно. <code>0</code> (или отсутствует) — без живых
+обновлений. Работает и для <code>chest</code>, и для <code>inventory</code>-меню.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Онлайн:</span><span class="nv"> </span><span class="s">&lt;white&gt;%server_online%&quot;</span>
+<span class="nt">update-interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w">      </span><span class="c1"># обновлять раз в секунду (20 тиков)</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;13&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CLOCK</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;yellow&gt;Баланс:</span><span class="nv"> </span><span class="s">&lt;green&gt;%vault_eco_balance%&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;TPS:</span><span class="nv"> </span><span class="s">&lt;white&gt;%server_tps_1%&quot;</span>
+</code></pre></div>
+<ul>
+<li>Значение приводится к минимуму <code>0</code> (отрицательное → <code>0</code> = выкл.).</li>
+<li><strong>Несовместимо с <a href="../Input-Slots/">input-слотами</a>.</strong> Если в меню есть хоть один элемент с <code>input:</code>,
+  интервал принудительно гасится в <code>0</code> (с предупреждением в лог): живой перерендер стёр бы содержимое
+  слота вместе с предметом игрока.</li>
+<li>Все живые меню обновляет <strong>одна</strong> общая повторяющаяся задача плагина.</li>
+<li>Значение — интервал перерисовки, а не «частота открытия»; на производительность влияет число открытых
+  живых меню × частота. Разумные значения — <code>10</code>–<code>40</code> тиков.</li>
+</ul>
+<hr />
+<h2 id="args"><code>args</code> — аргументы команды открытия<a class="headerlink" href="#args" title="Permanent link">&para;</a></h2>
+<p>Список <strong>имён</strong> аргументов. Когда меню открывают с хвостовыми токенами (<code>/menu &lt;a&gt; &lt;b&gt; …</code>, <code>/am open &lt;id&gt;
+&lt;игрок&gt; &lt;a&gt; &lt;b&gt; …</code>), плагин раскладывает их и делает доступными как подстановки <code>{...}</code> в <code>title</code>, <code>name</code>,
+<code>lore</code> <strong>и</strong> в действиях (<code>command</code>, <code>text</code>, <code>title</code>/<code>subtitle</code>, <code>server</code>, <code>permission</code> и т.п.).</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Профиль:</span><span class="nv"> </span><span class="s">&lt;yellow&gt;{name}&quot;</span>
+<span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">profile</span><span class="p p-Indicator">]</span><span class="w">           </span><span class="c1"># /profile &lt;name&gt;</span>
+<span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">name</span><span class="p p-Indicator">]</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;13&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAYER_HEAD</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;yellow&gt;{name}&quot;</span>
+<span class="w">    </span><span class="nt">lore</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;gray&gt;Открыть</span><span class="nv"> </span><span class="s">статистику&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">console</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;stats</span><span class="nv"> </span><span class="s">show</span><span class="nv"> </span><span class="s">{name}&quot;</span>
+</code></pre></div>
+<p>Как формируются подстановки (<code>buildArgs</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Токен</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{имя}</code></td>
+<td>Именованный аргумент из списка <code>args</code> по позиции: 1-е имя = 1-й токен, 2-е имя = 2-й токен …</td>
+</tr>
+<tr>
+<td><strong>последнее имя</strong></td>
+<td><strong>Захватывает весь остаток</strong> строки (все токены с его позиции и дальше, через пробел).</td>
+</tr>
+<tr>
+<td><code>{arg1}</code>, <code>{arg2}</code>, …</td>
+<td>Позиционные токены (1-индексация), всегда доступны, даже без <code>args</code>.</td>
+</tr>
+<tr>
+<td><code>{args}</code></td>
+<td>Все переданные токены одной строкой (через пробел).</td>
+</tr>
+</tbody>
+</table>
+<p>Пример «последнее имя ловит остаток»:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">broadcastmenu</span><span class="p p-Indicator">]</span><span class="w">     </span><span class="c1"># /broadcastmenu &lt;player&gt; &lt;текст сообщения...&gt;</span>
+<span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">target</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">text</span><span class="p p-Indicator">]</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;11&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PAPER</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;green&gt;Отправить&quot;</span>
+<span class="w">    </span><span class="nt">clicks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_command</span>
+<span class="w">          </span><span class="nt">as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">console</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;tell</span><span class="nv"> </span><span class="s">{target}</span><span class="nv"> </span><span class="s">{text}&quot;</span><span class="w">      </span><span class="c1"># {text} = всё после первого токена</span>
+</code></pre></div>
+<p>Тонкости:</p>
+<ul>
+<li>Пустые/пробельные имена в списке <code>args</code> отбрасываются, порядок сохраняется.</li>
+<li>Если токенов меньше, чем имён, недостающие именованные подстановки — пустая строка (<code>""</code>).</li>
+<li>Аргументы <strong>привязаны к текущему меню</strong> игрока: <code>open_menu</code>/<code>navigate</code> в под-меню сбрасывает их (под-меню
+  строит свои), а <code>back</code> восстанавливает те, с которыми открывалось меню, к которому вернулись.</li>
+<li>Подстановка <code>{...}</code> идёт <strong>до</strong> PlaceholderAPI (<code>%...%</code>), так что аргумент может даже попасть внутрь
+  плейсхолдера. Порядок разворачивания — <a href="../Actions/">Actions</a>, <a href="../Placeholders-and-Integrations/">Placeholders-and-Integrations</a>.</li>
+</ul>
+<hr />
+<h2 id="open-item-"><code>open-item</code> — предмет-открывашка (хотбар)<a class="headerlink" href="#open-item-" title="Permanent link">&para;</a></h2>
+<p>Секция, описывающая предмет, который <strong>открывает это меню по ПКМ</strong> (item-bind / «компас-меню»). Предмет
+несёт id меню в PDC (тот же механизм, что у <code>give_item</code> с полем <code>menu</code> — см. <a href="../Actions/">Actions</a>), поэтому
+ПКМ по нему открывает меню через штатный item-триггер.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Меню</span><span class="nv"> </span><span class="s">сервера&quot;</span>
+<span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">menu</span><span class="p p-Indicator">]</span>
+<span class="nt">open-item</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COMPASS</span><span class="w">       </span><span class="c1"># материал опенера</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Меню</span><span class="nv"> </span><span class="s">&lt;gray&gt;(ПКМ)&quot;</span>
+<span class="w">  </span><span class="nt">cmd</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;menu_compass&quot;</span><span class="w">     </span><span class="c1"># строковый custom-model-data (ресурспак), опц.</span>
+<span class="w">  </span><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span><span class="w">                 </span><span class="c1"># слот хотбара 0–8; иначе/-1 = первый свободный слот</span>
+<span class="w">  </span><span class="nt">give-on-join</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">      </span><span class="c1"># выдавать при входе/респавне, если у игрока его ещё нет</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;13&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> material</span><span class="p">:</span><span class="w"> </span><span class="nv">NETHER_STAR</span><span class="p p-Indicator">,</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;aqua&gt;Магазин&quot;</span><span class="p p-Indicator">,</span><span class="nt"> clicks</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> any</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">open_menu</span><span class="p p-Indicator">,</span><span class="nt"> menu</span><span class="p">:</span><span class="w"> </span><span class="nv">shop</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>По умолчанию</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>material</code></td>
+<td><code>COMPASS</code></td>
+<td>Материал предмета (неизвестный/не-предмет → <code>COMPASS</code>).</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>—</td>
+<td>Отображаемое имя (цвета/MiniMessage).</td>
+</tr>
+<tr>
+<td><code>cmd</code></td>
+<td>—</td>
+<td>Строковый custom-model-data для модели из ресурспака (как <code>cmd</code> предмета, см. <a href="../Items-and-Clicks/">Items-and-Clicks</a>).</td>
+</tr>
+<tr>
+<td><code>slot</code></td>
+<td><code>-1</code></td>
+<td>Целевой слот хотбара <code>0–8</code>. Вне диапазона/<code>-1</code> → добавить в первый свободный слот.</td>
+</tr>
+<tr>
+<td><code>give-on-join</code></td>
+<td><code>false</code></td>
+<td><code>true</code> — выдавать при входе/респавне, если у игрока ещё нет опенера этого меню.</td>
+</tr>
+</tbody>
+</table>
+<p>Поведение выдачи (<code>OpenItemListener</code>):</p>
+<ul>
+<li>Гейтится глобальным <code>open-items</code> в <code>config.yml</code> (см. <a href="../Configuration/">Configuration</a>): если он <code>false</code> —
+  никакой выдачи на входе.</li>
+<li>Опенер выдаётся с небольшой задержкой после входа (и на респавне), <strong>только если</strong> его ещё нет (ищется по
+  PDC-тегу меню) — дубликатов не будет.</li>
+<li>Если задан <code>slot 0–8</code> и он <strong>свободен</strong> — предмет кладётся туда; если слот <strong>занят</strong> реальной вещью, опенер
+  добавляется в первый свободный слот (чужую вещь никогда не перезаписывает).</li>
+<li>Право на само открытие проверяется при ПКМ (нужны <code>alexmenus.use</code> и <code>permission:</code> меню, если задано).</li>
+</ul>
+<blockquote>
+<p><code>open-item</code> описывает опенер, который меню раздаёт само. Разово выдать предмет-открывашку из действия можно
+через <a href="../Actions/"><code>give_item</code></a> с полем <code>menu</code>.</p>
+</blockquote>
+<hr />
+<h2 id="open-animation"><code>open-animation</code> — анимация открытия<a class="headerlink" href="#open-animation" title="Permanent link">&para;</a></h2>
+<p>Секция «пошагового появления» предметов при открытии <strong>сундук-меню</strong> (<code>type: chest</code>). Предметы
+расставляются по очереди — темп задаёт <code>speed</code> (1–100), с необязательным звуком на каждом шаге.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chest</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;gold&gt;Магазин&quot;</span>
+<span class="nt">rows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">open-animation</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spiral</span><span class="w">           </span><span class="c1"># порядок появления</span>
+<span class="w">  </span><span class="nt">speed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">140</span><span class="w">             </span><span class="c1"># темп 1..200 (выше 100 — несколько шагов за тик)</span>
+<span class="w">  </span><span class="nt">sound</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minecraft:ui.button.click&quot;</span><span class="w">   </span><span class="c1"># звук раз в тик, опц.</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="w">  </span><span class="s">&#39;0&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> material</span><span class="p">:</span><span class="w"> </span><span class="nv">DIAMOND</span><span class="p p-Indicator">,</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;b1&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="s">&#39;4&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> material</span><span class="p">:</span><span class="w"> </span><span class="nv">EMERALD</span><span class="p p-Indicator">,</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;b2&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="s">&#39;8&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> material</span><span class="p">:</span><span class="w"> </span><span class="nv">GOLD_INGOT</span><span class="p p-Indicator">,</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;b3&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>По умолчанию</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td><code>none</code></td>
+<td>Порядок появления (см. таблицу ниже).</td>
+</tr>
+<tr>
+<td><code>speed</code></td>
+<td>—</td>
+<td>Темп <strong>1–200</strong>. До 100 — интервал между шагами (<code>100</code> → 1 тик/шаг, <code>1</code> → 20 тиков/шаг); выше 100 — <strong>несколько шагов за один тик</strong>.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td><code>2</code></td>
+<td><strong>Легаси</strong>: тики между шагами напрямую. Читается <strong>только если <code>speed</code> не задан</strong>; всегда один шаг за тик.</td>
+</tr>
+<tr>
+<td><code>sound</code></td>
+<td>—</td>
+<td>Ключ звука (<code>namespace:path</code>), проигрываемый <strong>раз в тик</strong>.</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>—</td>
+<td>Явный список слотов для <code>type: custom</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Значения <code>type</code>:</p>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th>Алиасы</th>
+<th>Порядок появления</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td>—</td>
+<td>Без анимации — все предметы сразу (как без секции).</td>
+</tr>
+<tr>
+<td><code>sweep</code></td>
+<td><code>slots</code>, <code>slot</code></td>
+<td>По возрастанию слота, по одному слоту за шаг.</td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td><code>row</code></td>
+<td>Ряд за рядом (сверху вниз), целый ряд за шаг.</td>
+</tr>
+<tr>
+<td><code>columns</code></td>
+<td><code>column</code>, <code>cols</code>, <code>col</code></td>
+<td>Колонка за колонкой (слева направо), целая колонка за шаг.</td>
+</tr>
+<tr>
+<td><code>random</code></td>
+<td><code>shuffle</code></td>
+<td>В перемешанном порядке слотов, по одному за шаг.</td>
+</tr>
+<tr>
+<td><code>corners</code></td>
+<td><code>corner</code></td>
+<td>Растёт внутрь <strong>сразу из четырёх углов</strong>.</td>
+</tr>
+<tr>
+<td><code>edges</code></td>
+<td><code>converge</code>, <code>top_bottom</code>, <code>top-bottom</code></td>
+<td>Верхний и нижний ряды первыми, сходятся <strong>к центру</strong>.</td>
+</tr>
+<tr>
+<td><code>ellipse</code></td>
+<td><code>oval</code>, <code>ripple</code>, <code>center</code></td>
+<td><strong>Эллиптические кольца</strong> из трёх центральных слотов до всех краёв.</td>
+</tr>
+<tr>
+<td><code>spiral</code></td>
+<td>—</td>
+<td><strong>Спираль по часовой стрелке</strong> от внешней рамки внутрь.</td>
+</tr>
+<tr>
+<td><code>center-out</code></td>
+<td><code>center_out</code>, <code>centerout</code>, <code>outward</code>, <code>explode</code></td>
+<td><strong>Квадратные кольца</strong> от центра к краям («взрыв»).</td>
+</tr>
+<tr>
+<td><code>diagonal</code></td>
+<td><code>diag</code></td>
+<td><strong>Диагональные волны</strong> от левого верхнего угла.</td>
+</tr>
+<tr>
+<td><code>snake</code></td>
+<td><code>zigzag</code>, <code>boustrophedon</code></td>
+<td><strong>Змейка</strong> по рядам: туда — обратно — туда.</td>
+</tr>
+<tr>
+<td><code>custom</code></td>
+<td><code>order</code>, <code>manual</code></td>
+<td>Порядок, выписанный вручную в <code>order:</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Тонкости:</p>
+<ul>
+<li>Неизвестное значение <code>type</code> → <code>none</code> (анимации нет).</li>
+<li>Анимация применяется к <strong><code>chest</code></strong>-меню; <code>inventory</code>-меню появляются сразу (анимация к ним не применяется).</li>
+<li>Хорошо сочетается с <code>update-interval</code>: анимация — разовое появление при открытии, живые обновления идут
+  после.</li>
+<li>Скрытые (<code>view-requirement</code>) предметы и пустые слоты <strong>шагов не занимают</strong>.</li>
+<li>Явный <code>type: none</code> <strong>выключает</strong> анимацию, даже если рядом остался <code>order:</code> (до 1.9.0 такое меню молча
+  продолжало анимироваться — см. <a href="../Animations/">Анимации</a>).</li>
+</ul>
+<blockquote>
+<p>Полный разбор — темп до 200 %, геометрия всех узоров, <code>type: custom</code> с <code>order:</code>, кадровые анимации
+предметов — на странице <strong><a href="../Animations/">Анимации</a></strong>.</p>
+</blockquote>
+<hr />
+<p>Связанные страницы: <a href="../Menu-Types/">Menu-Types</a> (базовые ключи и типы), <a href="../Items-and-Clicks/">Items-and-Clicks</a>
+(поля предметов), <a href="../Animations/">Анимации</a> (<code>open-animation</code> целиком + кадровые анимации предметов),
+<a href="../Actions/">Actions</a> (<code>open_menu</code>, <code>give_item</code>, <code>run_command</code>, подстановки),
+<a href="../Configuration/">Configuration</a> (<code>open-items</code> — мастер-выключатель опенеров),
+<a href="../Placeholders-and-Integrations/">Placeholders-and-Integrations</a> (<code>%...%</code> в живых меню).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

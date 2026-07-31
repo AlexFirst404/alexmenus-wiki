@@ -1,0 +1,1283 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документация плагина AlexMenus — движок меню для Paper 1.21.11">
+      
+      
+      
+        <link rel="canonical" href="https://alexfirst404.github.io/alexmenus-wiki/Configuration/">
+      
+      
+        <link rel="prev" href="../Getting-Started/">
+      
+      
+        <link rel="next" href="../Menu-Types/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Настройки (config.yml) - AlexMenus</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/pixel.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configyml" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href=".." title="AlexMenus" class="md-header__button md-logo" aria-label="AlexMenus" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlexMenus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Настройки (config.yml)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AlexFirst404/alexmenus-editor" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlexFirst404/alexmenus-editor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AlexMenus" class="md-nav__button md-logo" aria-label="AlexMenus" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    AlexMenus
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AlexFirst404/alexmenus-editor" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlexFirst404/alexmenus-editor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Начало работы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Настройки (config.yml)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Настройки (config.yml)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        inventory-menu — меню прямо в инвентаре
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ~~editor~~ — блока больше нет
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        input-slots — слоты для вещей игрока
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cooldowns-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cooldowns — антиспам-задержки (мс)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sounds — стандартные звуки меню
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug — подробные логи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        update-checker — проверка обновлений
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-items-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open-items — мастер-выключатель предметов-открывашек
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        messages — тексты плагина
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configyml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Полный config.yml (со значениями по умолчанию)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Menu-Types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Типы меню
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Items-and-Clicks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Предметы и клики
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Input-Slots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input-слоты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Анимации
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Условия (requirements)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Advanced-Menu-Options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширенные опции меню
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Placeholders-and-Integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Плейсхолдеры и интеграции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commands-and-Permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Команды и права
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web-Editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Веб-редактор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Примеры
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        inventory-menu — меню прямо в инвентаре
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ~~editor~~ — блока больше нет
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        input-slots — слоты для вещей игрока
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cooldowns-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cooldowns — антиспам-задержки (мс)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sounds — стандартные звуки меню
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug — подробные логи
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        update-checker — проверка обновлений
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-items-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open-items — мастер-выключатель предметов-открывашек
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        messages — тексты плагина
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configyml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Полный config.yml (со значениями по умолчанию)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="configyml">Конфигурация (<code>config.yml</code>)<a class="headerlink" href="#configyml" title="Permanent link">&para;</a></h1>
+<p>Файл <code>plugins/AlexMenus/config.yml</code> — глобальные настройки плагина (сами меню лежат в <code>menus/*.yml</code>, см.
+<a href="../Getting-Started/">Getting-Started</a>). Все ключи <strong>необязательны</strong>: чего нет — берётся значение по умолчанию.
+Файл перечитывается на каждом <strong><code>/am reload</code></strong> (и при рестарте) — рестарт сервера не нужен.</p>
+<blockquote>
+<p>Меню-специфичные настройки (<code>update-interval</code>, <code>args</code>, <code>open-item</code>, <code>open-animation</code>) задаются НЕ здесь, а
+в самом файле меню — см. <a href="../Advanced-Menu-Options/">Advanced-Menu-Options</a>.</p>
+</blockquote>
+<h2 id="inventory-menu"><code>inventory-menu</code> — меню прямо в инвентаре<a class="headerlink" href="#inventory-menu" title="Permanent link">&para;</a></h2>
+<p>Управляет экспериментальным бэкендом <code>type: inventory</code> (подробнее — <a href="../Menu-Types/">Menu-Types</a>).</p>
+<div class="highlight"><pre><span></span><code><span class="nt">inventory-menu</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">      </span><span class="c1"># true — показывать меню-инвентарь всем игрокам при входе</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">         </span><span class="c1"># id меню (type: inventory), которое показывать по умолчанию</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Ключ</th>
+<th>По умолчанию</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>inventory-menu.enabled</code></td>
+<td><code>false</code></td>
+<td><code>true</code> — при входе всем игрокам авто-показывается меню-по-умолчанию.</td>
+</tr>
+<tr>
+<td><code>inventory-menu.default</code></td>
+<td><code>""</code></td>
+<td>id <code>inventory</code>-меню для авто-показа. Из него переходят на другие через <code>open_menu</code>. Авто-показ <strong>тихо</strong> уважает <code>permission</code>/<code>open-requirement</code> меню (без спама deny всем).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="editor">~~<code>editor</code>~~ — блока больше нет<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Удалено в 1.7.0</p>
+<p>Секции <strong><code>editor:</code> в <code>config.yml</code> больше не существует</strong>. Адреса хостед-редактора и paste-воркера
+<strong>зашиты в плагин</strong> и не настраиваются — <code>/am editor</code> работает сразу после установки, настраивать
+нечего.</p>
+<p>Если блок <code>editor:</code> остался в твоём старом конфиге — ничего не сломается: плагин <strong>один раз напишет
+предупреждение в лог</strong> и проигнорирует его. Блок можно спокойно удалить.</p>
+</div>
+<p>Подробности — <a href="../Web-Editor/">Web-Editor</a>.</p>
+<h2 id="input-slots"><code>input-slots</code> — слоты для вещей игрока<a class="headerlink" href="#input-slots" title="Permanent link">&para;</a></h2>
+<p>Поведение ячеек, куда игрок кладёт <strong>свои</strong> предметы (<code>input:</code> у элемента меню, см.
+<a href="../Input-Slots/">Input-Slots</a>).</p>
+<div class="highlight"><pre><span></span><code><span class="nt">input-slots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deny-creative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">   </span><span class="c1"># не принимать вещи из креатива</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Ключ</th>
+<th>По умолчанию</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input-slots.deny-creative</code></td>
+<td><code>true</code></td>
+<td><code>true</code> — не принимать в input-слот вещи, положенные игроком в <strong>креативном</strong> режиме: там стек бесконечный, и на выходе это дюп. <code>false</code> — принимать (на свой страх и риск).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Возврат предметов (закрытие, выход, смерть, <code>/am reload</code>, краш сервера) настройками не управляется — он
+безусловен. Снимки лежат в <code>plugins/AlexMenus/pending/</code> и удаляются сразу после выдачи.</p>
+</blockquote>
+<h2 id="cooldowns-"><code>cooldowns</code> — антиспам-задержки (мс)<a class="headerlink" href="#cooldowns-" title="Permanent link">&para;</a></h2>
+<p>Персональные (на игрока) задержки в <strong>миллисекундах</strong>. <code>0</code> = функция выключена.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">cooldowns</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">click-ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">     </span><span class="c1"># минимальная пауза между кликами по меню</span>
+<span class="w">  </span><span class="nt">open-ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">      </span><span class="c1"># минимальная пауза между открытиями меню</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Ключ</th>
+<th>По умолчанию</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cooldowns.click-ms</code></td>
+<td><code>0</code></td>
+<td>Мин. пауза (мс) между кликами игрока по меню. Проверяется <strong>до</strong> requirements/действий; при отказе шлётся <code>on-cooldown</code> и звук <code>sounds.deny</code>.</td>
+</tr>
+<tr>
+<td><code>cooldowns.open-ms</code></td>
+<td><code>0</code></td>
+<td>Мин. пауза (мс) между открытиями меню (<code>open</code>). При отказе — <code>on-cooldown</code> + <code>sounds.deny</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Кулдауны считаются по «настенным» часам и переживают <code>reload</code>; записи игрока чистятся при выходе.</p>
+</blockquote>
+<h2 id="sounds"><code>sounds</code> — стандартные звуки меню<a class="headerlink" href="#sounds" title="Permanent link">&para;</a></h2>
+<p>Звук-ключи (<code>namespace:path</code>), проигрываемые на четырёх встроенных событиях. <strong>Пусто/не задано = без
+звука</strong> (звуки выключены из коробки).</p>
+<div class="highlight"><pre><span></span><code><span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">open</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">        </span><span class="c1"># напр. minecraft:block.chest.open</span>
+<span class="w">  </span><span class="nt">close</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="nt">click</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">       </span><span class="c1"># напр. minecraft:ui.button.click</span>
+<span class="w">  </span><span class="nt">deny</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">        </span><span class="c1"># когда click-requirement отклоняет клик (и при кулдауне)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Ключ</th>
+<th>Когда проигрывается</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sounds.open</code></td>
+<td>При открытии меню.</td>
+</tr>
+<tr>
+<td><code>sounds.close</code></td>
+<td>При закрытии меню (<code>close</code>/<code>closeInventory</code>).</td>
+</tr>
+<tr>
+<td><code>sounds.click</code></td>
+<td>При клике, который <strong>проходит</strong> (после успешного <code>click-requirement</code>).</td>
+</tr>
+<tr>
+<td><code>sounds.deny</code></td>
+<td>Когда <code>click-requirement</code> отклонил клик, а также при срабатывании кулдауна.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Индивидуальный <code>sound:</code> в действии (<code>type: sound</code>, см. <a href="../Actions/">Actions</a>) <strong>приоритетнее</strong> и не зависит от
+этих настроек — здесь только четыре встроенных события. Громкость/высота фиксированы (<code>1.0</code>), источник
+<code>MASTER</code>. Битый ключ логируется и пропускается (без краша).</p>
+</blockquote>
+<h2 id="debug"><code>debug</code> — подробные логи<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p><code>true</code> — писать в лог подробности: загрузка каждого меню (id, категория, файл), запуск каждого действия
+(<code>action '&lt;type&gt;' -&gt; &lt;игрок&gt;</code>), оценку требований, попытки give/revoke прав. Полезно при отладке YAML.</p>
+<h2 id="update-checker"><code>update-checker</code> — проверка обновлений<a class="headerlink" href="#update-checker" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">update-checker</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p><code>true</code> — при запуске один раз асинхронно опросить GitHub Releases (только <strong>исходящий</strong> HTTPS), сравнить
+версии. Если доступна новее — записать в лог и уведомлять админов (<code>alexmenus.admin</code>) при входе. Результат
+виден в <strong><code>/am info</code></strong> (см. <a href="../Commands-and-Permissions/">Commands-and-Permissions</a>). Никогда не блокирует
+запуск; все ошибки проглатываются.</p>
+<h2 id="open-items-"><code>open-items</code> — мастер-выключатель предметов-открывашек<a class="headerlink" href="#open-items-" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">open-items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>Глобальный переключатель выдачи <strong>предметов-открывашек</strong> меню (<code>open-item</code>) при входе/респавне. <code>true</code> —
+выдача разрешена; отдельные меню включают её у себя через <code>open-item.give-on-join: true</code> (см.
+<a href="../Advanced-Menu-Options/">Advanced-Menu-Options</a>). <code>false</code> — ни одно меню не будет раздавать опенер на входе.</p>
+<h2 id="messages"><code>messages</code> — тексты плагина<a class="headerlink" href="#messages" title="Permanent link">&para;</a></h2>
+<p>Настраиваемые строки, которые шлёт плагин. Формат — привычные <strong>легаси <code>&amp;</code>-коды</strong> (<code>&amp;c</code>, <code>&amp;l</code>, <code>&amp;r</code>), hex
+(<code>&amp;#ff8800</code> или просто <code>#ff8800</code>), Bungee-hex (<code>&amp;x&amp;f&amp;f&amp;8&amp;8&amp;0&amp;0</code>) <strong>и</strong> любые теги MiniMessage; всё это можно
+мешать в одной строке (см. <a href="../Menu-Types/">Menu-Types</a>). Ко всем сообщениям спереди добавляется <code>prefix</code>
+(кроме самого <code>prefix</code>). Отсутствующий ключ берётся из встроенных значений по умолчанию.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">messages</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;7[&amp;6AlexMenus&amp;7]&amp;r</span><span class="nv"> </span><span class="s">&quot;</span>
+<span class="w">  </span><span class="nt">no-permission</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cНедостаточно</span><span class="nv"> </span><span class="s">прав.&quot;</span>
+<span class="w">  </span><span class="nt">menu-not-found</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cМеню</span><span class="nv"> </span><span class="s">не</span><span class="nv"> </span><span class="s">найдено:</span><span class="nv"> </span><span class="s">{menu}&quot;</span>
+<span class="w">  </span><span class="nt">players-only</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cТолько</span><span class="nv"> </span><span class="s">для</span><span class="nv"> </span><span class="s">игроков.&quot;</span>
+<span class="w">  </span><span class="nt">reloaded</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;aПерезагружено:</span><span class="nv"> </span><span class="s">{count}</span><span class="nv"> </span><span class="s">меню.&quot;</span>
+<span class="w">  </span><span class="nt">on-cooldown</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cПодожди</span><span class="nv"> </span><span class="s">немного.&quot;</span>
+<span class="w">  </span><span class="nt">applied</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;aПрименено:</span><span class="nv"> </span><span class="s">{count}</span><span class="nv"> </span><span class="s">меню.&quot;</span>
+<span class="w">  </span><span class="nt">apply-failed</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cНе</span><span class="nv"> </span><span class="s">удалось</span><span class="nv"> </span><span class="s">применить</span><span class="nv"> </span><span class="s">код.&quot;</span>
+<span class="w">  </span><span class="nt">invalid-code</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cНеверный</span><span class="nv"> </span><span class="s">код.&quot;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Ключ</th>
+<th>Плейсхолдеры</th>
+<th>Где используется</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prefix</code></td>
+<td>—</td>
+<td>Префикс перед всеми остальными сообщениями (сам рендерится «голым»).</td>
+</tr>
+<tr>
+<td><code>no-permission</code></td>
+<td>—</td>
+<td>Нет права: <code>/am open</code> без <code>alexmenus.use</code>, гейт <code>permission:</code> меню, запуск команды меню.</td>
+</tr>
+<tr>
+<td><code>menu-not-found</code></td>
+<td><code>{menu}</code></td>
+<td>Меню с таким id не найдено (<code>/am open</code>, команда меню, рендер). <code>{menu}</code> = запрошенный id.</td>
+</tr>
+<tr>
+<td><code>players-only</code></td>
+<td>—</td>
+<td>Команда только для игрока (напр. <code>/am preview</code> из консоли).</td>
+</tr>
+<tr>
+<td><code>reloaded</code></td>
+<td><code>{count}</code></td>
+<td>Успешный <code>/am reload</code>. <code>{count}</code> = число загруженных меню.</td>
+</tr>
+<tr>
+<td><code>on-cooldown</code></td>
+<td>—</td>
+<td>Сработал кулдаун <code>cooldowns.click-ms</code> / <code>cooldowns.open-ms</code>.</td>
+</tr>
+<tr>
+<td><code>applied</code></td>
+<td><code>{count}</code></td>
+<td>Успешный <code>/am apply &lt;код&gt;</code>. <code>{count}</code> = число применённых меню.</td>
+</tr>
+<tr>
+<td><code>apply-failed</code></td>
+<td>—</td>
+<td><code>/am apply</code> не смог скачать/применить код.</td>
+</tr>
+<tr>
+<td><code>invalid-code</code></td>
+<td>—</td>
+<td>Зарезервированное сообщение о неверном коде (в текущих командах сбои <code>apply</code> показывают <code>apply-failed</code>).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Подстановка <code>{name}</code> работает для любых пар «имя-значение», но в стандартных строках реально используются
+только <code>{menu}</code> и <code>{count}</code> — прочие ключи плейсхолдеров не содержат.</p>
+</blockquote>
+<h2 id="configyml_1">Полный <code>config.yml</code> (со значениями по умолчанию)<a class="headerlink" href="#configyml_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">inventory-menu</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+
+<span class="nt">cooldowns</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">click-ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">open-ms</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+
+<span class="nt">sounds</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">open</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="nt">close</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="nt">click</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="nt">deny</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+
+<span class="nt">input-slots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deny-creative</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">update-checker</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">open-items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">messages</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;7[&amp;6AlexMenus&amp;7]&amp;r</span><span class="nv"> </span><span class="s">&quot;</span>
+<span class="w">  </span><span class="nt">no-permission</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cНедостаточно</span><span class="nv"> </span><span class="s">прав.&quot;</span>
+<span class="w">  </span><span class="nt">menu-not-found</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cМеню</span><span class="nv"> </span><span class="s">не</span><span class="nv"> </span><span class="s">найдено:</span><span class="nv"> </span><span class="s">{menu}&quot;</span>
+<span class="w">  </span><span class="nt">players-only</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cТолько</span><span class="nv"> </span><span class="s">для</span><span class="nv"> </span><span class="s">игроков.&quot;</span>
+<span class="w">  </span><span class="nt">reloaded</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;aПерезагружено:</span><span class="nv"> </span><span class="s">{count}</span><span class="nv"> </span><span class="s">меню.&quot;</span>
+<span class="w">  </span><span class="nt">on-cooldown</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cПодожди</span><span class="nv"> </span><span class="s">немного.&quot;</span>
+<span class="w">  </span><span class="nt">applied</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;aПрименено:</span><span class="nv"> </span><span class="s">{count}</span><span class="nv"> </span><span class="s">меню.&quot;</span>
+<span class="w">  </span><span class="nt">apply-failed</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cНе</span><span class="nv"> </span><span class="s">удалось</span><span class="nv"> </span><span class="s">применить</span><span class="nv"> </span><span class="s">код.&quot;</span>
+<span class="w">  </span><span class="nt">invalid-code</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&amp;cНеверный</span><span class="nv"> </span><span class="s">код.&quot;</span>
+</code></pre></div>
+<p>Связанные страницы: <a href="../Menu-Types/">Menu-Types</a> (типы меню и цвета), <a href="../Advanced-Menu-Options/">Advanced-Menu-Options</a>
+(меню-специфичные ключи), <a href="../Input-Slots/">Input-Slots</a> (<code>input-slots.deny-creative</code>),
+<a href="../Commands-and-Permissions/">Commands-and-Permissions</a> (<code>/am reload</code>, <code>/am info</code>),
+<a href="../Web-Editor/">Web-Editor</a> (редактор — настраивать нечего).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
