@@ -11,8 +11,11 @@
 .md-nav__title .md-logo img,
 .md-nav__title .md-logo svg,
 img.pixel {
+  /* Порядок важен: побеждает ПОСЛЕДНЕЕ объявление, которое браузер понял. crisp-edges идёт первым
+     как запасной для старых сборок Firefox, pixelated — вторым, потому что реализован
+     предсказуемее и должен выигрывать везде, где поддерживается. */
+  image-rendering: crisp-edges;
   image-rendering: pixelated;
-  image-rendering: crisp-edges;   /* запасной вариант для старых сборок Firefox */
   shape-rendering: crispEdges;
 }
 
